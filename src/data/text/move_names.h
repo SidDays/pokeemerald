@@ -358,7 +358,6 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_ROOST] = _("Roost"),
     [MOVE_GRAVITY] = _("Gravity"),
     [MOVE_MIRACLE_EYE] = _("Miracle Eye"),
-    [MOVE_WAKE_UP_SLAP] = _("Wake Up Slap"),
     [MOVE_HAMMER_ARM] = _("Hammer Arm"),
     [MOVE_GYRO_BALL] = _("Gyro Ball"),
     [MOVE_HEALING_WISH] = _("Healing Wish"),
