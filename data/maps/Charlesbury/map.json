@@ -15,7 +15,7 @@
     "name": "Charlesbury",
     "object_events": [
     ],
-    "region_map_section": "MAPSEC_NONE",
+    "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
     "requires_flash": false,
     "show_map_name": true,
     "warp_events": [

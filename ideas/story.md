@@ -7,3 +7,9 @@
 ## Love Story
 - Someone dating someone famous
 - Gym leader dating E4 member
+
+## Team Poppy
+- Drug dealing team
+
+## Hoenn TV style TV
+- Reporters
