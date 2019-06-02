@@ -7115,3 +7115,5 @@ gText_082C877B:: @ 82C877B
 	.include "data/text/birch_speech.inc"
 
 	.include "data/maps/Charlesbury/scripts.inc"
+
+	.include "data/maps/NewMap1/scripts.inc"
