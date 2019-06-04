@@ -66,6 +66,9 @@ static const struct Fanfare sFanfares[] = {
 void InitMapMusic(void)
 {
     gDisableMusic = FALSE;
+    #if DEBUG
+        gDisableMusic = TRUE;
+    #endif
     ResetMapMusic();
 }
 
