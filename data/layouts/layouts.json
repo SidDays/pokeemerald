@@ -4429,6 +4429,16 @@
             "primary_tileset": "gTileset_General",
             "secondary_tileset": "gTileset_Petalburg",
             "width": 42
+        },
+        {
+            "blockdata_filepath": "data/layouts/Coastal1/map.bin",
+            "border_filepath": "data/layouts/Coastal1/border.bin",
+            "height": 30,
+            "id": "LAYOUT_COASTAL1",
+            "name": "Coastal1_Layout",
+            "primary_tileset": "gTileset_General",
+            "secondary_tileset": "gTileset_Dewford",
+            "width": 32
         }
     ],
     "layouts_table_label": "gMapLayouts"

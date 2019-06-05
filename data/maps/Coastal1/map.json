@@ -1,0 +1,24 @@
+{
+    "allow_bike": true,
+    "allow_escape_rope": false,
+    "allow_running": true,
+    "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+    "bg_events": [
+    ],
+    "connections": null,
+    "coord_events": [
+    ],
+    "id": "MAP_COASTAL1",
+    "layout": "LAYOUT_COASTAL1",
+    "map_type": "MAP_TYPE_UNUSED_1",
+    "music": "MUS_RG_SANTOAN",
+    "name": "Coastal1",
+    "object_events": [
+    ],
+    "region_map_section": "MAPSEC_DEWFORD_TOWN",
+    "requires_flash": false,
+    "show_map_name": true,
+    "warp_events": [
+    ],
+    "weather": "WEATHER_SUNNY"
+}
