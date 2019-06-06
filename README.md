@@ -6,10 +6,25 @@ This is a decapitalized (all-caps text replaced with proper capitalization) disa
 
 It builds the following rom:
 
-* pokeemerald.gba `sha1: d90e55a563b7a65a88bc0a34fee22bfcff678cb0`
+* pokeemerald.gba
 
 To set up the repository, see [INSTALL.md](INSTALL.md).
 
+## Credits
+
+- FroggestSpirit#8660 and Kurausukun on the pret discord for help with adding music tracks to pokeemerald
+
+## Tools Used
+
+- pokeemerald
+- porymap
+- Advance-Map
+- TileMap Creator
+- GraphicsGale
+- Adobe Photoshop
+- FL Studio
+- Anvil Studio
+- VS Code
 
 ## See also
 
