@@ -25,4 +25,5 @@ static const struct HealLocation sHealLocations[] =
     {MAP_GROUP(CHARLESBURY), MAP_NUM(CHARLESBURY), 42, 33},
     {MAP_GROUP(NEW_MAP1), MAP_NUM(NEW_MAP1), 37, 18},
     {MAP_GROUP(COASTAL1), MAP_NUM(COASTAL1), 0, 0},
+    {MAP_GROUP(DARK1), MAP_NUM(DARK1), 12, 13},
 };
