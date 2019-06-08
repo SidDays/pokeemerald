@@ -1,5 +1,10 @@
+# Ideas
 dump/
 
+# Windows Shortcuts
+*.lnk
+
+# Old gitignore
 *.exe
 *.o
 *.i
