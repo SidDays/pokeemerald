@@ -1,61 +1,59 @@
-gText_Birch_Welcome:: @ 82C897B
-	.string "Hi! Sorry to keep you waiting!\p"
-	.string "Welcome to the world of Pokémon!\p"
-	.string "My name is Birch.\p"
-	.string "But everyone calls me the Pokémon\n"
-	.string "Professor.\p"
+gText_Birch_Welcome::
+	.string "Dear Applicant,\p"
+
+	.string "We're pleased to let you know that\n"
+	.string "you've been accepted as a Research\l"
+	.string "Assistant this summer!\p"
+
+	.string "Your application was certainly very\n"
+	.string "interesting, and we can't wait to have\l"
+	.string "you start working with us.\p"
+
+	.string "We've made some interesting discoveries\n"
+	.string "about the Pokémon in Twinland.\p"
+
+	.string "As of recently, the Pokémon here have\n"
+	.string "have been adapting into new forms.\p"
+
 	.string "$"
 
-gText_Birch_Pokemon:: @ 82C89FB
-	.string "This is what we call a “Pokémon.”\p"
-	.string "\n"
+gText_Birch_Pokemon::
+	.string "…\p"
 	.string "$"
 
-gText_Birch_MainSpeech:: @ 82C8A1F
-	.string "This world is widely inhabited by\n"
-	.string "creatures known as Pokémon.\p"
-	.string "We humans live alongside Pokémon,\n"
-	.string "at times as friendly playmates, and\l"
-	.string "at times as cooperative workmates.\p"
-	.string "And sometimes, we band together\n"
-	.string "and battle others like us.\p"
-	.string "But despite our closeness, we don't\n"
-	.string "know everything about Pokémon.\p"
-	.string "In fact, there are many, many\n"
-	.string "secrets surrounding Pokémon.\p"
-	.string "To unravel Pokémon mysteries,\n"
-	.string "I've been undertaking research.\l"
-	.string "That's what I do.\p"
+gText_Birch_MainSpeech::
+	.string "And that is what you'll be helping us\n"
+	.string "figure out!\p"
 	.string "$"
 
-gText_Birch_AndYouAre:: @ 82C8BD0
-	.string "And you are?$"
+gText_Birch_AndYouAre::
+	.string "First, a little about yourself…$"
 
-gText_Birch_BoyOrGirl:: @ 82C8BDD
+gText_Birch_BoyOrGirl::
 	.string "Are you a boy?\n"
 	.string "Or are you a girl?$"
 
-gText_Birch_WhatsYourName:: @ 82C8BFF
-	.string "All right.\n"
-	.string "What's your name?$"
+gText_Birch_WhatsYourName::
+	.string "…and, what is your name?$"
 
-gText_Birch_SoItsPlayer:: @ 82C8C1C
-	.string "So it's {PLAYER}{KUN}?$"
+gText_Birch_SoItsPlayer::
+	.string "{PLAYER}, right?$"
 
-gText_Birch_YourePlayer:: @ 82C8C2A
-	.string "Ah, okay!\p"
-	.string "You're {PLAYER}{KUN} who's moving to my\n"
-	.string "hometown of Littleroot.\l"
-	.string "I get it now!\p"
+gText_Birch_YourePlayer::
+	.string "Sounds great!\p"
+	.string "That's all the information I need,\n"
+	.string "for now.\p"
 	.string "$"
 
-gText_Birch_AreYouReady:: @ 82C8C7A
-	.string "All right, are you ready?\p"
-	.string "Your very own adventure is about\n"
-	.string "to unfold.\p"
-	.string "Take courage, and leap into the\n"
-	.string "world of Pokémon where dreams,\l"
-	.string "adventure, and friendships await!\p"
-	.string "Well, I'll be expecting you later.\n"
-	.string "Come see me in my Pokémon Lab.\p"
+gText_Birch_AreYouReady::
+	.string "So, {PLAYER}.\p"
+
+	.string "You'll be joining two other students to\n"
+	.string "help out with my research.\p"
+
+	.string "I'll be making accomodations for you to\n"
+	.string "join us in TODO: Town.\p"
+
+	.string "Have a safe journey!\p"
+	.string "I hope to see you in my Pokémon Lab soon!\p"
 	.string "$"
