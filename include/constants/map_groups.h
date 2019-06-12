@@ -63,6 +63,7 @@
 #define MAP_NEW_MAP1         (58 | (0 << 8))
 #define MAP_COASTAL1         (59 | (0 << 8))
 #define MAP_DARK1            (60 | (0 << 8))
+#define MAP_ROUTE_SAND       (61 | (0 << 8))
 
 // Map Group 1
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))

@@ -7121,3 +7121,5 @@ gText_082C877B:: @ 82C877B
 	.include "data/maps/Coastal1/scripts.inc"
 
 	.include "data/maps/Dark1/scripts.inc"
+
+	.include "data/maps/RouteSand/scripts.inc"
