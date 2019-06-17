@@ -2420,6 +2420,14 @@ Common_Movement_FaceUp: @ 82725B2
 	face_up
 	step_end
 
+Common_Movement_FaceRight::
+	face_right
+	step_end
+
+Common_Movement_FaceLeft::
+	face_left
+	step_end
+
 BattleFrontier_BattleDomeBattleRoom_Movement_2725B4: @ 82725B4
 MeteorFalls_1F_1R_Movement_2725B4: @ 82725B4
 	walk_in_place_down

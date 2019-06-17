@@ -8,4 +8,3 @@ Script_SignpostScript::
 Text_SignpostScript:
 	.string "Charlesbury\n"
 	.string "A taste of the urban life$"
-	

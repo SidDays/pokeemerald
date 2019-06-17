@@ -4463,7 +4463,7 @@
         {
             "blockdata_filepath": "data/layouts/NewLab/map.bin",
             "border_filepath": "data/layouts/NewLab/border.bin",
-            "height": 11,
+            "height": 10,
             "id": "LAYOUT_NEW_LAB",
             "name": "NewLab_Layout",
             "primary_tileset": "gTileset_Building",
