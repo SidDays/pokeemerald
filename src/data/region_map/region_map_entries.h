@@ -1,7 +1,7 @@
 #ifndef GUARD_DATA_REGION_MAP_REGION_MAP_ENTRIES_H
 #define GUARD_DATA_REGION_MAP_REGION_MAP_ENTRIES_H
 
-static const u8 sMapName_LittlerootTown[] = _("Littleroot Town");
+static const u8 sMapName_SerenityTown[] = _("Serenity Town");
 static const u8 sMapName_OldaleTown[] = _("Oldale Town");
 static const u8 sMapName_DewfordTown[] = _("Dewford Town");
 static const u8 sMapName_LavaridgeTown[] = _("Lavaridge Town");
@@ -200,7 +200,7 @@ static const u8 sMapName_DesertUnderpass[] = _("Desert Underpass");
 static const u8 sMapName_TrainerHill[] = _("Trainer Hill");
 
 const struct RegionMapLocation gRegionMapEntries[] = {
-    [MAPSEC_LITTLEROOT_TOWN]           = { 4, 11, 1, 1, sMapName_LittlerootTown},
+    [MAPSEC_LITTLEROOT_TOWN]           = { 4, 11, 1, 1, sMapName_SerenityTown},
     [MAPSEC_OLDALE_TOWN]               = { 4,  9, 1, 1, sMapName_OldaleTown},
     [MAPSEC_DEWFORD_TOWN]              = { 2, 14, 1, 1, sMapName_DewfordTown},
     [MAPSEC_LAVARIDGE_TOWN]            = { 5,  3, 1, 1, sMapName_LavaridgeTown},

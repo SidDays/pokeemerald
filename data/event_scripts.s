@@ -7125,7 +7125,7 @@ gText_082C877B:: @ 82C877B
 
 	.include "data/maps/Charlesbury/scripts.inc"
 
-	.include "data/maps/NewMap1/scripts.inc"
+	.include "data/maps/SerenityTown/scripts.inc"
 
 	.include "data/maps/Coastal1/scripts.inc"
 

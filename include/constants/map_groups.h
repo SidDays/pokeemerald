@@ -60,7 +60,7 @@
 #define MAP_UNDERWATER6      (55 | (0 << 8))
 #define MAP_UNDERWATER7      (56 | (0 << 8))
 #define MAP_CHARLESBURY      (57 | (0 << 8))
-#define MAP_NEW_MAP1         (58 | (0 << 8))
+#define MAP_SERENITY_TOWN    (58 | (0 << 8))
 #define MAP_COASTAL1         (59 | (0 << 8))
 #define MAP_DARK1            (60 | (0 << 8))
 #define MAP_ROUTE_SAND       (61 | (0 << 8))

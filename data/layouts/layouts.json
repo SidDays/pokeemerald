@@ -4421,11 +4421,11 @@
             "width": 60
         },
         {
-            "blockdata_filepath": "data/layouts/NewMap1/map.bin",
-            "border_filepath": "data/layouts/NewMap1/border.bin",
+            "blockdata_filepath": "data/layouts/SerenityTown/map.bin",
+            "border_filepath": "data/layouts/SerenityTown/border.bin",
             "height": 34,
-            "id": "LAYOUT_NEW_MAP1",
-            "name": "NewMap1_Layout",
+            "id": "LAYOUT_SERENITY_TOWN",
+            "name": "SerenityTown_Layout",
             "primary_tileset": "gTileset_General",
             "secondary_tileset": "gTileset_Petalburg",
             "width": 42

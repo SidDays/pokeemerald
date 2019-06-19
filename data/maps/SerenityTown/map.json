@@ -7,7 +7,7 @@
         {
             "elevation": 0,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "NewMap1_Script_PlayersHouse",
+            "script": "SerenityTown_Script_PlayersHouse",
             "type": "sign",
             "x": 3,
             "y": 12
@@ -15,7 +15,7 @@
         {
             "elevation": 0,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "NewMap1_Script_ProfPineLab",
+            "script": "SerenityTown_Script_ProfPineLab",
             "type": "sign",
             "x": 16,
             "y": 17
@@ -31,7 +31,7 @@
         {
             "elevation": 0,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "NewMap1_Script_Townsign",
+            "script": "SerenityTown_Script_Townsign",
             "type": "sign",
             "x": 21,
             "y": 23
@@ -40,11 +40,11 @@
     "connections": null,
     "coord_events": [
     ],
-    "id": "MAP_NEW_MAP1",
-    "layout": "LAYOUT_NEW_MAP1",
+    "id": "MAP_SERENITY_TOWN",
+    "layout": "LAYOUT_SERENITY_TOWN",
     "map_type": "MAP_TYPE_UNUSED_1",
     "music": "MUS_DAN02",
-    "name": "NewMap1",
+    "name": "SerenityTown",
     "object_events": [
         {
             "elevation": 3,
@@ -66,7 +66,7 @@
             "movement_range_x": 1,
             "movement_range_y": 1,
             "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-            "script": "NewMap1_Script_NPC1",
+            "script": "SerenityTown_Script_NPC1",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
             "x": 7,
@@ -79,7 +79,7 @@
             "movement_range_x": 5,
             "movement_range_y": 0,
             "movement_type": "MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT",
-            "script": "NewMap1_Script_Jogger",
+            "script": "SerenityTown_Script_Jogger",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
             "x": 32,
@@ -104,7 +104,7 @@
     "show_map_name": true,
     "warp_events": [
         {
-            "dest_map": "MAP_NEW_MAP1",
+            "dest_map": "MAP_SERENITY_TOWN",
             "dest_warp_id": 0,
             "elevation": 0,
             "x": 6,
@@ -118,21 +118,21 @@
             "y": 16
         },
         {
-            "dest_map": "MAP_NEW_MAP1",
+            "dest_map": "MAP_SERENITY_TOWN",
             "dest_warp_id": 0,
             "elevation": 0,
             "x": 6,
             "y": 26
         },
         {
-            "dest_map": "MAP_NEW_MAP1",
+            "dest_map": "MAP_SERENITY_TOWN",
             "dest_warp_id": 0,
             "elevation": 0,
             "x": 37,
             "y": 17
         },
         {
-            "dest_map": "MAP_NEW_MAP1",
+            "dest_map": "MAP_SERENITY_TOWN",
             "dest_warp_id": 0,
             "elevation": 0,
             "x": 17,

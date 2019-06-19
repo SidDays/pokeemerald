@@ -229,14 +229,14 @@
     "show_map_name": false,
     "warp_events": [
         {
-            "dest_map": "MAP_NEW_MAP1",
+            "dest_map": "MAP_SERENITY_TOWN",
             "dest_warp_id": 1,
             "elevation": 0,
             "x": 6,
             "y": 9
         },
         {
-            "dest_map": "MAP_NEW_MAP1",
+            "dest_map": "MAP_SERENITY_TOWN",
             "dest_warp_id": 1,
             "elevation": 0,
             "x": 7,
