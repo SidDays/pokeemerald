@@ -15,6 +15,7 @@ SerenityTown_MapScript_Welcome:
 	setvar VAR_LITTLEROOT_INTRO_STATE 1
 
 	/* Player jumps out of truck */
+	playse SE_TRACK_DOOR
 	delay 10
 	playse SE_DANSA
 	applymovement EVENT_OBJ_ID_PLAYER, SerenityTown_Movement_JumpOutOfTruck
@@ -24,9 +25,17 @@ SerenityTown_MapScript_Welcome:
 	applymovement 4, SerenityTown_Movement_TruckLeavesToTheLeft
 	waitmovement 0
 	removeobject 4
-	delay 10
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE
+	delay 16
 
+	/* Player walks into lab */
+	applymovement EVENT_OBJ_ID_PLAYER, SerenityTown_Movement_PlayerWalksUpToLabDoor
+	waitmovement 0
+	opendoor 19, 16
+	waitdooranim
+	applymovement EVENT_OBJ_ID_PLAYER, SerenityTown_Movement_PlayerWalksIntoLab
+	waitmovement 0
+	warp MAP_NEW_LAB, 0, -1, -1
 	end
 
 SerenityTown_Movement_JumpOutOfTruck:
@@ -46,6 +55,23 @@ SerenityTown_Movement_TruckLeavesToTheLeft:
 	walk_left
 	walk_left
 	walk_left
+	step_end
+
+SerenityTown_Movement_PlayerWalksUpToLabDoor:
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	step_end
+
+SerenityTown_Movement_PlayerWalksIntoLab:
+	walk_up
 	step_end
 
 /* Signposts */
