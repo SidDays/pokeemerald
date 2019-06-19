@@ -10,7 +10,7 @@ gText_Birch_Welcome::
 	.string "you start working with us.\p"
 
 	.string "We've made some interesting discoveries\n"
-	.string "about the Pokémon in Twinland.\p"
+	.string "about the Pokémon in Donoh.\p"
 
 	.string "As of recently, the Pokémon here have\n"
 	.string "have been adapting into new forms.\p"
@@ -52,8 +52,7 @@ gText_Birch_AreYouReady::
 	.string "help out with my research.\p"
 
 	.string "I'll be making accomodations for you to\n"
-	.string "join us in TODO: Town.\p"
+	.string "join us in Serenity Town.\p"
 
-	.string "Have a safe journey!\p"
-	.string "I hope to see you in my Pokémon Lab soon!\p"
-	.string "$"
+	.string "I hope to see you soon.\n"
+	.string "Have a safe journey!$"

@@ -59,8 +59,8 @@ NewMap1_Script_Townsign::
 	end
 
 NewMap1_Text_Townsign:
-	.string "NewMap1\n"
-	.string "“The town of new beginnings”$"
+	.string "Serenity Town\n"
+	.string "“A peaceful hillside retreat”$"
 
 NewMap1_Script_PlayersHouse::
 	msgbox NewMap1_Text_PlayersHouse, MSGBOX_SIGN
