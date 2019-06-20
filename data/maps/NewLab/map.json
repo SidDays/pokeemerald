@@ -55,7 +55,7 @@
         {
             "elevation": 0,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "NewLab_Text_Book",
+            "script": "NewLab_Script_Book",
             "type": "sign",
             "x": 10,
             "y": 1
@@ -63,7 +63,7 @@
         {
             "elevation": 0,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "NewLab_Text_Book",
+            "script": "NewLab_Script_Book",
             "type": "sign",
             "x": 11,
             "y": 1
@@ -147,6 +147,22 @@
             "type": "sign",
             "x": 12,
             "y": 7
+        },
+        {
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "NewLab_Script_Machine",
+            "type": "sign",
+            "x": 9,
+            "y": 5
+        },
+        {
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "NewLab_Script_Machine",
+            "type": "sign",
+            "x": 10,
+            "y": 5
         }
     ],
     "connections": null,
@@ -165,7 +181,7 @@
             "movement_range_x": 0,
             "movement_range_y": 0,
             "movement_type": "MOVEMENT_TYPE_NONE",
-            "script": "NULL",
+            "script": "NewLab_Script_ProfWaiting",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
             "x": 6,
@@ -173,12 +189,12 @@
         },
         {
             "elevation": 3,
-            "flag": "0",
+            "flag": "FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG",
             "graphics_id": "EVENT_OBJ_GFX_LEAF",
             "movement_range_x": 0,
             "movement_range_y": 0,
             "movement_type": "MOVEMENT_TYPE_FACE_UP",
-            "script": "NULL",
+            "script": "NewLab_Script_AlyshaWaiting",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
             "x": 4,
@@ -186,12 +202,12 @@
         },
         {
             "elevation": 3,
-            "flag": "0",
+            "flag": "FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG",
             "graphics_id": "EVENT_OBJ_GFX_RED",
             "movement_range_x": 0,
             "movement_range_y": 0,
             "movement_type": "MOVEMENT_TYPE_FACE_UP",
-            "script": "NULL",
+            "script": "NewLab_Script_JaiWaiting",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
             "x": 8,
@@ -204,7 +220,7 @@
             "movement_range_x": 0,
             "movement_range_y": 0,
             "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
-            "script": "NULL",
+            "script": "NewLab_Script_Aide",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
             "x": 11,

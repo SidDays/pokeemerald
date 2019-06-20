@@ -75,7 +75,6 @@ SerenityTown_Movement_PlayerWalksIntoLab:
 	step_end
 
 /* Signposts */
-
 SerenityTown_Script_Townsign2::
 	msgbox SerenityTown_Text_Townsign, MSGBOX_SIGN
 	return
@@ -103,13 +102,12 @@ SerenityTown_Text_ProfPineLab:
 	.string "Prof. Pine Research Lab$"
 
 /* Environment and NPCs */
-
 SerenityTown_Script_Jogger::
 	msgbox SerenityTown_Text_Jogger, MSGBOX_NPC
 	end
 
 SerenityTown_Text_Jogger:
-	.string "I'm practicing for the marathon!\n"
+	.string "I'm practicing for the marathon!\p"
 	.string "Get out of my way now! Shoo!$"
 
 SerenityTown_Script_NPC1::
@@ -121,5 +119,5 @@ SerenityTown_Text_NPC1:
 	.string "That's so cool!\p"
 	.string "My nephew Wally is also from Hoenn.\n"
 	.string "I think he's the new Champion!\p"
-	.string "…\n"
+	.string "… … … … … … … …\p"
 	.string "He isn't? You must be kidding!$"
