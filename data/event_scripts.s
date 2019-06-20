@@ -2421,11 +2421,11 @@ Common_Movement_FaceUp: @ 82725B2
 	face_up
 	step_end
 
-Common_Movement_FaceRight::
+Common_Movement_FaceRight:
 	face_right
 	step_end
 
-Common_Movement_FaceLeft::
+Common_Movement_FaceLeft:
 	face_left
 	step_end
 
