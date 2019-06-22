@@ -37,7 +37,13 @@
             "y": 23
         }
     ],
-    "connections": null,
+    "connections": [
+        {
+            "direction": "down",
+            "map": "MAP_ROUTE501",
+            "offset": 2
+        }
+    ],
     "coord_events": [
     ],
     "id": "MAP_SERENITY_TOWN",

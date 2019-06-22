@@ -74,6 +74,75 @@
           }
         },
         {
+          "map": "MAP_ROUTE501",
+          "base_label": "gRoute501",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 2,
+                "max_level": 2,
+                "species": "SPECIES_TAILLOW"
+              },
+              {
+                "min_level": 2,
+                "max_level": 2,
+                "species": "SPECIES_TAILLOW"
+              },
+              {
+                "min_level": 2,
+                "max_level": 2,
+                "species": "SPECIES_TAILLOW"
+              },
+              {
+                "min_level": 2,
+                "max_level": 2,
+                "species": "SPECIES_TAILLOW"
+              },
+              {
+                "min_level": 2,
+                "max_level": 2,
+                "species": "SPECIES_TAILLOW"
+              },
+              {
+                "min_level": 2,
+                "max_level": 2,
+                "species": "SPECIES_TAILLOW"
+              },
+              {
+                "min_level": 2,
+                "max_level": 2,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 2,
+                "max_level": 2,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 2,
+                "max_level": 2,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 2,
+                "max_level": 2,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 2,
+                "max_level": 2,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 2,
+                "max_level": 2,
+                "species": "SPECIES_SENTRET"
+              }
+            ]
+          }
+        },
+        {
           "map": "MAP_ROUTE102",
           "base_label": "gRoute102",
           "land_mons": {

@@ -119,6 +119,8 @@ NewLab_Script_StarterSelect::
 	waitfanfare
 	setflag FLAG_SYS_POKEDEX_GET
 	special sub_81AFDA0
+	setflag FLAG_SYS_NATIONAL_DEX
+	special EnableNationalPokedex
 	closemessage
 	delay 24
 

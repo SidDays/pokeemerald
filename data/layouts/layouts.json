@@ -4469,6 +4469,16 @@
             "primary_tileset": "gTileset_Building",
             "secondary_tileset": "gTileset_Lab",
             "width": 14
+        },
+        {
+            "blockdata_filepath": "data/layouts/Route501/map.bin",
+            "border_filepath": "data/layouts/Route501/border.bin",
+            "height": 26,
+            "id": "LAYOUT_ROUTE501",
+            "name": "Route501_Layout",
+            "primary_tileset": "gTileset_General",
+            "secondary_tileset": "gTileset_Petalburg",
+            "width": 20
         }
     ],
     "layouts_table_label": "gMapLayouts"
