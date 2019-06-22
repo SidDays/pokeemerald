@@ -13,29 +13,35 @@ NewLab_Script_PlayerWalksIntoLab:
 	lock
 	applymovement EVENT_OBJ_ID_PLAYER, NewLab_Movement_PlayerGoesToProf
 	waitmovement 0
+	delay 16
 	playse SE_PIN
 	applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 0
-	msgbox NewLab_Text_ProfWelcomes, MSGBOX_NPC
+	msgbox NewLab_Text_ProfWelcomes, MSGBOX_DEFAULT
+
+	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_FaceLeft
 	applymovement 2, Common_Movement_FaceRight
 	waitmovement 0
-	msgbox NewLab_Text_AlyshaWelcomes, MSGBOX_NPC
+	msgbox NewLab_Text_AlyshaWelcomes, MSGBOX_DEFAULT
+
 	applymovement 3, Common_Movement_FaceLeft
+	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
-	msgbox NewLab_Text_JaiWelcomes, MSGBOX_NPC
+	msgbox NewLab_Text_JaiWelcomes, MSGBOX_DEFAULT
+
+	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_FaceUp
 	applymovement 2, Common_Movement_FaceUp
 	applymovement 3, Common_Movement_FaceUp
 	waitmovement 0
 	delay 16
 
-	msgbox NewLab_Text_ProfGivesStarter, MSGBOX_NPC
+	msgbox NewLab_Text_ProfGivesStarter, MSGBOX_DEFAULT
 	release
 	end
 
 NewLab_Movement_PlayerGoesToProf:
 	walk_up
 	walk_up
-	face_up
 	step_end
 
 NewLab_Text_ProfWelcomes:
@@ -73,9 +79,11 @@ NewLab_Script_StarterSelect::
 	/* TODO: Nickname */
 	applymovement EVENT_OBJ_ID_PLAYER, NewLab_Movement_PlayerGetsOutOftheWay
 	waitmovement 0
+	applymovement 1, Common_Movement_FaceDown
+	waitmovement 0
 
 	/* Alysha picks a starter */
-	msgbox NewLab_Text_AlyshaGetsStarter, MSGBOX_NPC
+	msgbox NewLab_Text_AlyshaGetsStarter, MSGBOX_DEFAULT
 	applymovement 2, NewLab_Movement_AlyshaGetsStarter
 	waitmovement 0
 	delay 48
@@ -83,7 +91,7 @@ NewLab_Script_StarterSelect::
 	waitmovement 0
 
 	/* Jai picks a starter */
-	msgbox NewLab_Text_JaiGetsStarter, MSGBOX_NPC
+	msgbox NewLab_Text_JaiGetsStarter, MSGBOX_DEFAULT
 	applymovement 3, NewLab_Movement_JaiGetsStarter
 	waitmovement 0
 	delay 48
@@ -91,7 +99,7 @@ NewLab_Script_StarterSelect::
 	waitmovement 0
 
 	/* Prof hides the bag */
-	msgbox NewLab_Text_ProfStashesBag, MSGBOX_NPC
+	msgbox NewLab_Text_ProfStashesBag, MSGBOX_DEFAULT
 	applymovement 1, NewLab_Movement_ProfPutsTheBagAway
 	waitmovement 0
 	removeobject 5
@@ -100,53 +108,63 @@ NewLab_Script_StarterSelect::
 	waitmovement 0
 	
 	/* Prof gives dex and balls */
-	msgbox NewLab_Text_ProfGivesDexAndBalls, MSGBOX_NPC
+	msgbox NewLab_Text_ProfGivesDexAndBalls, MSGBOX_DEFAULT
 
 	/* TODO: Sounds */
 	applymovement 1, NewLab_Movement_ProfGivesDexAndBallsToPlayer
 	waitmovement 0
+
+	playfanfare MUS_FANFA4
+	message NewLab_Text_PlayerReceivesDex
 	waitfanfare
 	setflag FLAG_SYS_POKEDEX_GET
 	special sub_81AFDA0
-	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
-	msgbox NewLab_Text_PlayerReceivesDex, MSGBOX_DEFAULT
+	closemessage
 	delay 24
 
 	applymovement 1, NewLab_Movement_ProfGivesDexAndBallsToAlysha
 	waitmovement 0
 	applymovement 2, Common_Movement_FaceRight
 	waitmovement 0
-	delay 24
+	delay 16
 
 	applymovement 1, NewLab_Movement_ProfGivesDexAndBallsToJai
 	waitmovement 0
 	applymovement 3, Common_Movement_FaceLeft
 	waitmovement 0
-	delay 24
+	delay 16
 
 	/* Prof is done talking */
 	applymovement 1, NewLab_Movement_ProfReturnsToPosition2
 	applymovement 2, Common_Movement_FaceUp
 	applymovement 3, Common_Movement_FaceUp
 	waitmovement 0
-	msgbox NewLab_Text_ProfIsDoneWithEverything, MSGBOX_NPC
+	msgbox NewLab_Text_ProfIsDoneWithEverything, MSGBOX_DEFAULT
 
 	/* Everyone leaves */
-	msgbox NewLab_Text_AlyshaLeaving, MSGBOX_NPC
+	msgbox NewLab_Text_AlyshaLeaving, MSGBOX_DEFAULT
 	applymovement 2, NewLab_Movement_AlyshaLeaving
 	waitmovement 0
 	removeobject 2
-	playse SE_TK_WARPOUT
+	playse SE_KAIDAN
 	delay 48
 
-	msgbox NewLab_Text_JaiLeaving, MSGBOX_NPC
+	msgbox NewLab_Text_JaiLeaving, MSGBOX_DEFAULT
 	applymovement 3, NewLab_Movement_JaiLeaving
 	waitmovement 0
 	removeobject 3
-	playse SE_TK_WARPOUT
+	playse SE_KAIDAN
 	delay 24
 
+	setvar VAR_LITTLEROOT_INTRO_STATE 3
+
 	release
+	end
+
+NewLab_Script_ProfSpeaks::
+	compare VAR_LITTLEROOT_INTRO_STATE, 2
+	goto_if_eq NewLab_Script_ProfWaiting
+	msgbox NewLab_Text_ProfIsDoneWithEverything, MSGBOX_NPC
 	end
 
 NewLab_Script_ProfWaiting::
@@ -172,10 +190,32 @@ NewLab_Script_JaiWaiting::
 NewLab_Text_JaiWaiting:
 	.string "This is so exciting!$"
 
+NewLab_Script_LeaveBeforeStarterTrigger::
+	lockall
+	playse SE_PIN
+	applymovement 1, Common_Movement_FaceDown
+	applymovement 1, Common_Movement_ExclamationMark
+	waitmovement 0
+	delay 16
+	msgbox NewLab_Text_LeaveBeforeStarterTrigger, MSGBOX_DEFAULT
+	applymovement EVENT_OBJ_ID_PLAYER, NewLab_Movement_LeaveBeforeStarterTrigger
+	waitmovement 0
+	releaseall
+	end
+
+NewLab_Text_LeaveBeforeStarterTrigger:
+	.string "Prof. Pine: Just a second!\p"
+	.string "I know you're excited, but you will\n"
+	.string "need a Starter Pokémon out there!$"
+
+NewLab_Movement_LeaveBeforeStarterTrigger:
+	walk_up
+	step_end
+
 /* After Player's Starter Selection */
 NewLab_Movement_PlayerGetsOutOftheWay:
-	walk_down
 	walk_left
+	walk_down
 	face_right
 	step_end
 
