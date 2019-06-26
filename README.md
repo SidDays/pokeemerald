@@ -1,8 +1,10 @@
-# Pokémon Emerald
+# Pokémon Emerald Hack
 
-[![Build Status][travis-badge]][travis]
+## Introduction
 
-This is a decapitalized (all-caps text replaced with proper capitalization) disassembly of Pokémon Emerald.
+I (Sidrk) am making a Pokémon Hack!
+It doesn't have a name yet, neither a set story. Frankly, I've barely finished any work on it yet.
+But stay tuned! Perhaps I can make the next [Pokémon Gaia](https://www.pokecommunity.com/showthread.php?t=326118) ~~or even better lol~~
 
 It builds the following rom:
 
@@ -12,19 +14,25 @@ To set up the repository, see [INSTALL.md](INSTALL.md).
 
 ## Credits
 
-- FroggestSpirit#8660 and Kurausukun on the pret discord for help with adding music tracks to pokeemerald
+### Scripting
+- [Avara](https://www.pokecommunity.com/member.php?u=294199) on PokéCommunity for her [pokeemerald scripting tutorials](https://www.pokecommunity.com/showthread.php?p=9963724)
+- [aueuaio](https://www.pokecommunity.com/member.php?u=725983) on PokéCommunity for his [tutorial](https://www.pokecommunity.com/showpost.php?p=9995188&postcount=16) on skipping the Poochyena Battle after starter selection
+- [ThomasWinwood](https://www.pokecommunity.com/member.php?u=439522) on PokéCommunity for his [tutorial](https://www.pokecommunity.com/showthread.php?t=420390) on implementing a debug menu
 
-## Tools Used
+### Music
+- FroggestSpirit and Kurausukun on the pret discord for help with adding music tracks to pokeemerald
+- [FreeMidi.org](https://freemidi.org/), various uploaders on [MuseScore](https://musescore.com) and [MidiDB](https://www.mididb.com/) for various MIDI files which I could convert into music
 
-- pokeemerald
-- porymap
-- Advance-Map
-- TileMap Creator
-- GraphicsGale
-- Adobe Photoshop
-- FL Studio
-- Anvil Studio
-- VS Code
+### Tools Used
+- [pokeemerald](https://github.com/pret/pokeemerald)
+- [porymap](https://github.com/huderlem/porymap)
+- [Advance Map 1.92](https://www.pokecommunity.com/showthread.php?t=127348)
+- [TileMap Creator](https://github.com/erandis-vol/Tilemap-Creator/releases)
+- [GraphicsGale](https://graphicsgale.com/us/)
+- [FL Studio](https://www.image-line.com/flstudio/)
+- [Anvil Studio](https://www.anvilstudio.com/)
+- [VS Code](https://code.visualstudio.com/)
+- [Adobe Photoshop](https://www.adobe.com/products/photoshop.html)
 
 ## See also
 
