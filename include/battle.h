@@ -249,6 +249,7 @@ struct AI_ThinkingStruct
     u8 aiLogicId;
     u8 simulatedRNG[4];
     struct AI_SavedBattleMon saved[4];
+    bool8 switchMon; // Because all available moves have no/little effect.
 };
 
 struct UsedMoves
@@ -473,7 +474,7 @@ struct BattleStruct
     u32 savedBattleTypeFlags;
     u8 abilityPreventingSwitchout;
     u8 hpScale;
-    u8 synchronizeMoveEffect;
+    u16 synchronizeMoveEffect;
     bool8 anyMonHasTransformed;
     void (*savedCallback)(void);
     u16 usedHeldItems[MAX_BATTLERS_COUNT];
