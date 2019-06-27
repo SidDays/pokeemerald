@@ -130,7 +130,7 @@ $(MID_SUBDIR)/mus_dooro_x3.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G014 -V080
 
 $(MID_SUBDIR)/mus_dooro_x4.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G021 -V080
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V080
 
 $(MID_SUBDIR)/mus_dooro1.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G011 -V080
@@ -310,7 +310,7 @@ $(MID_SUBDIR)/mus_nibi.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -V080
 
 $(MID_SUBDIR)/mus_odamaki.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G033 -V080
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V080
 
 $(MID_SUBDIR)/mus_ooame.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G089 -V080

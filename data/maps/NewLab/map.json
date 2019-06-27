@@ -189,7 +189,7 @@
     "id": "MAP_NEW_LAB",
     "layout": "LAYOUT_NEW_LAB",
     "map_type": "MAP_TYPE_INDOOR",
-    "music": "MUS_AJITO",
+    "music": "MUS_ODAMAKI",
     "name": "NewLab",
     "object_events": [
         {
