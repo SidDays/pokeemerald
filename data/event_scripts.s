@@ -2367,6 +2367,14 @@ SlateportCity_Movement_272596: @ 8272596
 	emote_question_mark
 	step_end
 
+Common_Movement_Heart:
+	emote_heart
+	step_end
+
+Common_Movement_QuestionMark:
+	emote_question_mark
+	step_end
+
 Common_Movement_ExclamationMark: @ 8272598
 	emote_exclamation_mark
 	step_end
