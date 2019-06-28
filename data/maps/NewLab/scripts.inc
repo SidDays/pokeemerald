@@ -278,8 +278,10 @@ NewLab_Text_ProfGivesDexAndBalls:
 	.string "Pokédex, a high-tech tool that\l"
 	.string "automatically makes a record of any\l"
 	.string "Pokémon you meet or catch.\p"
-	.string "Also, you'll need some tools to help\nyou catch Pokémon!\p"
-	.string "So here's a Pokédex and five Poké Balls\n for each one of you.$"
+	.string "Also, you'll need some tools to help\n"
+	.string "you catch Pokémon!\p"
+	.string "So here's a Pokédex and five Poké Balls\n"
+	.string "for each one of you.$"
 
 NewLab_Movement_ProfGivesDexAndBallsToPlayer:
 	walk_down

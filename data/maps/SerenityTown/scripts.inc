@@ -74,6 +74,58 @@ SerenityTown_Movement_PlayerWalksIntoLab:
 	walk_up
 	step_end
 
+/* Jai Battle */
+SerenityTown_Script_JaiStarterBattle::
+	lockall
+	playbgm MUS_BOY_SUP, 1
+	msgbox SerenityTown_Text_JaiBeforeBattle, MSGBOX_DEFAULT
+	switch VAR_STARTER_MON
+	case 0, SerenityTown_Script_JaiStarterBattle1
+	case 1, SerenityTown_Script_JaiStarterBattle2
+	case 2, SerenityTown_Script_JaiStarterBattle3
+	end
+
+SerenityTown_Script_JaiStarterBattle1::
+	trainerbattle_no_intro TRAINER_BRENDAN_1, SerenityTown_Text_JaiEndBattle
+	goto SerenityTown_Script_JaiStarterBattleFinished
+	end
+
+SerenityTown_Script_JaiStarterBattle2::
+	trainerbattle_no_intro TRAINER_BRENDAN_1, SerenityTown_Text_JaiEndBattle
+	goto SerenityTown_Script_JaiStarterBattleFinished
+	end
+
+SerenityTown_Script_JaiStarterBattle3::
+	trainerbattle_no_intro TRAINER_BRENDAN_1, SerenityTown_Text_JaiEndBattle
+	goto SerenityTown_Script_JaiStarterBattleFinished
+	end
+
+SerenityTown_Script_JaiStarterBattleFinished::
+	closemessage
+	fadedefaultbgm
+	msgbox SerenityTown_Text_JaiAfterBattle, MSGBOX_DEFAULT
+	setvar VAR_LITTLEROOT_INTRO_STATE, 4
+	releaseall
+	end
+
+SerenityTown_Text_JaiBeforeBattle:
+	.string "Jai: Um, hey, {PLAYER}!\p"
+	.string "Like, the professor has given all of us\n"
+	.string "Pokémon, but all this is still so, like,\l"
+	.string "new to me…\p"
+	.string "Would you care to have a quick battle\nwith me?\p"
+	.string "Just to like, test things out!\n"
+	.string "Pleeeeease!$"
+
+SerenityTown_Text_JaiEndBattle:
+	.string "Well, that was certainly interesting…\p"
+	.string "You are like, sooo strong!$"
+
+SerenityTown_Text_JaiAfterBattle:
+	.string "I think I'll eventually get the hang of\n"
+	.string "this…\p"
+	.string "Until then, see ya!$"
+
 /* Signposts */
 SerenityTown_Script_Townsign2::
 	msgbox SerenityTown_Text_Townsign, MSGBOX_SIGN

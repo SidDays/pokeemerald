@@ -45,6 +45,15 @@
         }
     ],
     "coord_events": [
+        {
+            "elevation": 0,
+            "script": "SerenityTown_Script_JaiStarterBattle",
+            "type": "trigger",
+            "var": "VAR_LITTLEROOT_INTRO_STATE",
+            "var_value": "3",
+            "x": 17,
+            "y": 19
+        }
     ],
     "id": "MAP_SERENITY_TOWN",
     "layout": "LAYOUT_SERENITY_TOWN",
