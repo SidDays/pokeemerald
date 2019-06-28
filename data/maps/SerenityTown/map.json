@@ -49,7 +49,7 @@
     "id": "MAP_SERENITY_TOWN",
     "layout": "LAYOUT_SERENITY_TOWN",
     "map_type": "MAP_TYPE_UNUSED_1",
-    "music": "MUS_DAN02",
+    "music": "MUS_MISHIRO",
     "name": "SerenityTown",
     "object_events": [
         {

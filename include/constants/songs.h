@@ -298,7 +298,7 @@
 #define MUS_FANFA5 371          // Your Pokémon Just Evolved!
 #define MUS_ME_WAZA 372         // Obtained a TM/HM!
 #define MUS_BIJYUTU 373         // Lilycove Museum
-#define MUS_DOORO_X4 374        // Route 122/Intro
+#define MUS_DOORO_X4 374        // Professor Pine Welcome Intro [DPP Professor Rowan Intro]
 #define MUS_FUNE_KAN 375        // Slateport Museum
 #define MUS_ME_SHINKA 376       // Evolution Intro
 #define MUS_SHINKA 377          // Evolution
@@ -307,7 +307,7 @@
 #define MUS_BOYEYE 380          // Encounter! Boy
 #define MUS_DAN02 381           // Abandoned Ship/Southern Island
 #define MUS_MACHI_S3 382        // Fortree City/Pacifidlog Town
-#define MUS_ODAMAKI 383         // Professor Birch's Lab
+#define MUS_ODAMAKI 383         // Professor Pine's Lab [Professor Sycamore Lab Theme]
 #define MUS_B_TOWER 384         // Battle Tower (RS)
 #define MUS_SWIMEYE 385         // Encounter! Swimmer
 #define MUS_DAN03 386           // Meteor Falls/Cave of Origin
@@ -329,7 +329,7 @@
 #define MUS_GRANROAD 402        // Route 119
 #define MUS_CYCLING 403         // Cycling
 #define MUS_FRIENDLY 404        // Pokémart
-#define MUS_MISHIRO 405         // Littleroot Town
+#define MUS_MISHIRO 405         // Serenity Town [Remi Himekawa Theme]
 #define MUS_TOZAN 406           // Sky Pillar
 #define MUS_GIRLEYE 407         // Encounter! Girl
 #define MUS_MINAMO 408          // Lilycove City
