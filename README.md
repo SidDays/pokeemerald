@@ -18,6 +18,7 @@ To set up the repository, see [INSTALL.md](INSTALL.md).
 - [Avara](https://www.pokecommunity.com/member.php?u=294199) on PokéCommunity for her [pokeemerald scripting tutorials](https://www.pokecommunity.com/showthread.php?p=9963724)
 - [aueuaio](https://www.pokecommunity.com/member.php?u=725983) on PokéCommunity for his [tutorial](https://www.pokecommunity.com/showpost.php?p=9995188&postcount=16) on skipping the Poochyena Battle after starter selection
 - [ThomasWinwood](https://www.pokecommunity.com/member.php?u=439522) on PokéCommunity for his [tutorial](https://www.pokecommunity.com/showthread.php?t=420390) on implementing a debug menu
+- [BLAx501!](https://whackahack.com/foro/u-26580/blax501-/) on Whack a Hack! for their [tutorial](https://whackahack.com/foro/t-58832/pokeemerald-mostrar-hora-al-desplegar-menu) on Time Display in the Start Menu
 
 ### Music
 - FroggestSpirit and Kurausukun on the pret discord for help with adding music tracks to pokeemerald

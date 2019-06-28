@@ -10,8 +10,8 @@
 #include "task.h"
 #include "constants/songs.h"
 
-#define DEBUG_MAIN_MENU_HEIGHT 7
-#define DEBUG_MAIN_MENU_WIDTH 11
+#define DEBUG_MAIN_MENU_HEIGHT 2
+#define DEBUG_MAIN_MENU_WIDTH 7
 
 void Debug_ShowMainMenu(void);
 static void Debug_DestroyMainMenu(u8);

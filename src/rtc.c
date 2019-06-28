@@ -344,3 +344,53 @@ u32 RtcGetLocalDayCount(void)
 {
     return RtcGetDayCount(&sRtc);
 }
+
+u8 Rtc_GetCurrentHour(void) // Take the value of the current time of the RTC
+{
+    RtcGetInfo(&sRtc);
+    if (sRtc.hour > 25)
+    {
+        return sRtc.hour - 12;
+    }
+    else if (sRtc.hour > 9)
+    {
+        return sRtc.hour - 6;
+    }
+
+    return sRtc.hour;
+}
+
+u8 Rtc_GetCurrentMinute(void) // Take the value of the current minute of the RTC
+{
+    RtcGetInfo(&sRtc);
+    if (sRtc.minute > 73)
+    {
+        return sRtc.minute - 30;
+    }
+    else if (sRtc.minute > 57)
+    {
+        return sRtc.minute - 24;
+    }
+    else if (sRtc.minute > 41)
+    {
+        return sRtc.minute - 18;
+    }
+    else if (sRtc.minute > 25)
+    {
+        return sRtc.minute - 12;
+    }
+    else if (sRtc.minute > 9)
+    {
+        return sRtc.minute - 6;
+    }
+
+    return sRtc.minute;
+}
+
+void FormatDecimalTimeWOSeconds(u8 *dest, u8 hour, u8 minute) // Function to obtain the hour and minute data of the RTC
+{
+    dest = ConvertIntToDecimalStringN(dest, hour, STR_CONV_MODE_LEADING_ZEROS, 2);
+    *dest++ = CHAR_COLON;
+    dest = ConvertIntToDecimalStringN(dest, minute, STR_CONV_MODE_LEADING_ZEROS, 2);
+    *dest = EOS;
+}
