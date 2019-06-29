@@ -15,6 +15,7 @@ NewLab_Script_PlayerWalksIntoLab:
 	waitmovement 0
 	delay 16
 	playse SE_PIN
+	waitse
 	applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 0
 	msgbox NewLab_Text_ProfWelcomes, MSGBOX_DEFAULT
@@ -195,6 +196,7 @@ NewLab_Text_JaiWaiting:
 NewLab_Script_LeaveBeforeStarterTrigger::
 	lockall
 	playse SE_PIN
+	waitse
 	applymovement 1, Common_Movement_FaceDown
 	applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 0

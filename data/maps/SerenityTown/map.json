@@ -42,6 +42,11 @@
             "direction": "down",
             "map": "MAP_ROUTE501",
             "offset": 2
+        },
+        {
+            "direction": "left",
+            "map": "MAP_ROUTE102",
+            "offset": 8
         }
     ],
     "coord_events": [
@@ -112,6 +117,19 @@
             "trainer_type": "0",
             "x": 18,
             "y": 23
+        },
+        {
+            "elevation": 3,
+            "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL",
+            "graphics_id": "EVENT_OBJ_GFX_RED",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "movement_type": "MOVEMENT_TYPE_NONE",
+            "script": "NULL",
+            "trainer_sight_or_berry_tree_id": "0",
+            "trainer_type": "0",
+            "x": 17,
+            "y": 25
         }
     ],
     "region_map_section": "MAPSEC_LITTLEROOT_TOWN",

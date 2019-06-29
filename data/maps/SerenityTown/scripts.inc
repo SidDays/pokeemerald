@@ -76,8 +76,22 @@ SerenityTown_Movement_PlayerWalksIntoLab:
 
 /* Jai Battle */
 SerenityTown_Script_JaiStarterBattle::
-	lockall
+	lock
 	playbgm MUS_BOY_SUP, 1
+
+	msgbox SerenityTown_Text_JaiNoticesPlayer, MSGBOX_DEFAULT
+	waitmessage
+	closemessage
+	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitse
+	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement 0
+	delay 16
+	
+	addobject 5
+	applymovement 5, SerenityTown_Movement_JaiWalksUpToPlayerForStarterBattle
+	waitmovement 0
 	msgbox SerenityTown_Text_JaiBeforeBattle, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
 	case 0, SerenityTown_Script_JaiStarterBattle1
@@ -101,30 +115,57 @@ SerenityTown_Script_JaiStarterBattle3::
 	end
 
 SerenityTown_Script_JaiStarterBattleFinished::
-	closemessage
 	fadedefaultbgm
 	msgbox SerenityTown_Text_JaiAfterBattle, MSGBOX_DEFAULT
+	waitmessage
+	closemessage
+	applymovement 5, SerenityTown_Movement_JaiWalksAwayFromPlayerAfterStarterBattle
+	waitmovement 0
+	removeobject 5
 	setvar VAR_LITTLEROOT_INTRO_STATE, 4
-	releaseall
+	release
 	end
 
-SerenityTown_Text_JaiBeforeBattle:
+SerenityTown_Text_JaiNoticesPlayer:
 	.string "Jai: Um, hey, {PLAYER}!\p"
-	.string "Like, the professor has given all of us\n"
-	.string "Pokémon, but all this is still so, like,\l"
+	.string "… … … … … … … …$"
+
+SerenityTown_Movement_JaiWalksUpToPlayerForStarterBattle:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+SerenityTown_Text_JaiBeforeBattle:
+	.string "I know that the Professor has given all\n"
+	.string "of us Pokémon, but this is still so, um,\l"
 	.string "new to me…\p"
-	.string "Would you care to have a quick battle\nwith me?\p"
-	.string "Just to like, test things out!\n"
-	.string "Pleeeeease!$"
+	.string "Would you care to have a quick battle\n"
+	.string "with me?\p"
+	.string "Pleeease!$"
 
 SerenityTown_Text_JaiEndBattle:
 	.string "Well, that was certainly interesting…\p"
-	.string "You are like, sooo strong!$"
+	.string "You are a really strong Trainer!$"
 
 SerenityTown_Text_JaiAfterBattle:
-	.string "I think I'll eventually get the hang of\n"
-	.string "this…\p"
-	.string "Until then, see ya!$"
+	.string "I think I'll eventually get the hang\n"
+	.string "of this…\p"
+	.string "Oh, by the way, don't forget to check\n"
+	.string "out our room at the Researcher Lodge!\p"
+	.string "There's some stuff there that you might\n"
+	.string "find useful.\p"
+	.string "Now I REALLY have to get going. \nSee ya!$"
+
+SerenityTown_Movement_JaiWalksAwayFromPlayerAfterStarterBattle:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
 
 /* Signposts */
 SerenityTown_Script_Townsign2::
@@ -159,17 +200,28 @@ SerenityTown_Script_Jogger::
 	end
 
 SerenityTown_Text_Jogger:
-	.string "I'm practicing for the marathon!\p"
+	.string "I'm practicing for the Marathon!\p"
 	.string "Get out of my way now! Shoo!$"
 
 SerenityTown_Script_NPC1::
-	msgbox SerenityTown_Text_NPC1, MSGBOX_NPC
+	lock
+	faceplayer
+	msgbox SerenityTown_Text_NPC1a, MSGBOX_DEFAULT
+	applymovement 2, Common_Movement_QuestionMark
+	playse SE_PIN
+	waitmovement 0
+	waitse
+	msgbox SerenityTown_Text_NPC1b, MSGBOX_DEFAULT
+	release
 	end
 
-SerenityTown_Text_NPC1:
-	.string "Oh, you're from Hoenn?\n"
-	.string "That's so cool!\p"
-	.string "My nephew Wally is also from Hoenn.\n"
-	.string "I think he's the new Champion!\p"
-	.string "… … … … … … … …\p"
-	.string "He isn't? You must be kidding!$"
+SerenityTown_Text_NPC1a:
+	.string "Oh, you're from Hoenn?\p"
+	.string "That's so cool!\n"
+	.string "My nephew Wally is also from Hoenn.\p"
+	.string "I heard he's the new Champion!\p"
+	.string "… … … … … … … …$"
+
+SerenityTown_Text_NPC1b:
+	.string "He isn't?\p"
+	.string "You must be kidding!$"
