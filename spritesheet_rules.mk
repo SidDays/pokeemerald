@@ -228,6 +228,9 @@ $(EVENTOBJGFXDIR)/people/hot_springs_old_woman.4bpp: %.4bpp: %.png
 $(EVENTOBJGFXDIR)/people/lass.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
+$(EVENTOBJGFXDIR)/people/officer.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
 $(EVENTOBJGFXDIR)/people/leaf.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 

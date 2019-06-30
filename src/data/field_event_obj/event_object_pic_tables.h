@@ -2149,6 +2149,18 @@ const struct SpriteFrameImage gEventObjectPicTable_HoOh[] = {
     overworld_frame(gEventObjectPic_HoOh, 4, 4, 1),
 };
 
+const struct SpriteFrameImage gEventObjectPicTable_Officer[] = {
+    overworld_frame(gEventObjectPic_Officer, 2, 4, 0),
+    overworld_frame(gEventObjectPic_Officer, 2, 4, 1),
+    overworld_frame(gEventObjectPic_Officer, 2, 4, 2),
+    overworld_frame(gEventObjectPic_Officer, 2, 4, 3),
+    overworld_frame(gEventObjectPic_Officer, 2, 4, 4),
+    overworld_frame(gEventObjectPic_Officer, 2, 4, 5),
+    overworld_frame(gEventObjectPic_Officer, 2, 4, 6),
+    overworld_frame(gEventObjectPic_Officer, 2, 4, 7),
+    overworld_frame(gEventObjectPic_Officer, 2, 4, 8),
+};
+
 const struct SpriteFrameImage gEventObjectPicTable_RubySapphireBrendan[] = {
     overworld_frame(gEventObjectPic_RubySapphireBrendanNormal, 2, 4, 0),
     overworld_frame(gEventObjectPic_RubySapphireBrendanNormal, 2, 4, 1),

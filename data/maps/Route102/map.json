@@ -91,15 +91,15 @@
         {
             "elevation": 3,
             "flag": "0",
-            "graphics_id": "EVENT_OBJ_GFX_BOY_1",
+            "graphics_id": "EVENT_OBJ_GFX_OFFICER",
             "movement_range_x": 1,
             "movement_range_y": 1,
-            "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
             "script": "Route102_EventScript_1EC0FC",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
-            "x": 37,
-            "y": 4
+            "x": 48,
+            "y": 10
         },
         {
             "elevation": 3,
