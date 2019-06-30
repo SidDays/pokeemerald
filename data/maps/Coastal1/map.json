@@ -21,7 +21,13 @@
             "y": 16
         }
     ],
-    "connections": null,
+    "connections": [
+        {
+            "direction": "up",
+            "map": "MAP_ROUTE_SAND",
+            "offset": 0
+        }
+    ],
     "coord_events": [
     ],
     "id": "MAP_COASTAL1",

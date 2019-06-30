@@ -5,7 +5,13 @@
     "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
     "bg_events": [
     ],
-    "connections": null,
+    "connections": [
+        {
+            "direction": "down",
+            "map": "MAP_COASTAL1",
+            "offset": 0
+        }
+    ],
     "coord_events": [
     ],
     "id": "MAP_ROUTE_SAND",
