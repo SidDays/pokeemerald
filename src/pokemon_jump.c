@@ -1813,7 +1813,7 @@ static void sub_802C398(int multiplayerId)
     sub_802DC80(multiplayerId, var1);
     if (!var1 && multiplayerId == gUnknown_02022CFC->unk6)
         sub_802C1BC();
-    
+
     player->unk0 = var1;
 }
 
@@ -2096,7 +2096,7 @@ static u16 sub_802C880(u16 item, u16 quantity)
 {
     while (quantity && !CheckBagHasSpace(item, quantity))
         quantity--;
-    
+
     return quantity;
 }
 
@@ -2151,7 +2151,7 @@ void sub_802C974(struct PokemonJump2 *arg0)
 
     for (i = 0; i < ARRAY_COUNT(gUnknown_082FBE08); i++)
         LoadCompressedSpriteSheet(&gUnknown_082FBE08[i]);
-    
+
     for (i = 0; i < ARRAY_COUNT(gUnknown_082FBE30); i++)
         LoadSpritePalette(&gUnknown_082FBE30[i]);
 
@@ -2187,7 +2187,7 @@ void sub_802C9D4(struct PokemonJump2 *arg0, struct PokemonJump1_MonInfo *jumpMon
     if (buffer && unusedBuffer)
     {
         HandleLoadSpecialPokePic(
-            &gMonStillFrontPicTable[jumpMon->species],
+            &gMonFrontPicTable[jumpMon->species],
             buffer,
             jumpMon->species,
             jumpMon->personality);

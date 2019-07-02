@@ -922,7 +922,7 @@ void ItemUseInBattle_PokeBall(u8 taskId)
     if (IsBattlerAlive(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT))
         && IsBattlerAlive(GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT))) // There are two present pokemon.
     {
-        static const u8 textCantThrowPokeBall[] = _("Cannot throw a ball!\nThere are two pokemon out there!\p");
+        u8 textCantThrowPokeBall[] = _("Cannot throw a ball!\nThere are two pokemon out there!\p");
 
         if (!InBattlePyramid())
             DisplayItemMessage(taskId, 1, textCantThrowPokeBall, BagMenu_InitListsMenu);
@@ -931,7 +931,7 @@ void ItemUseInBattle_PokeBall(u8 taskId)
     }
     else if (gBattlerInMenuId == GetBattlerAtPosition(B_POSITION_PLAYER_RIGHT)) // Attempting to throw a ball with the second pokemon.
     {
-        static const u8 textCantThrowPokeBall[] = _("Cannot throw a ball!\p");
+        u8 textCantThrowPokeBall[] = _("Cannot throw a ball!\p");
 
         if (!InBattlePyramid())
             DisplayItemMessage(taskId, 1, textCantThrowPokeBall, BagMenu_InitListsMenu);
@@ -1122,4 +1122,3 @@ void ItemUseOutOfBattle_CannotUse(u8 taskId)
 {
     DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].data[3]);
 }
-
