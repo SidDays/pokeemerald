@@ -50,7 +50,7 @@ TrainerHill_Entrance_MapScript1_268128: @ 8268128
 	end
 
 TrainerHill_Entrance_EventScript_268134:: @ 8268134
-	setmetatile 17, 10, 775, 0
+	setmetatile 17, 10, METATILE_TrainerHill_GreenFloorTile, 0
 	return
 
 TrainerHill_Entrance_MapScript2_26813E: @ 826813E
@@ -64,7 +64,7 @@ TrainerHill_Entrance_EventScript_268160:: @ 8268160
 	lockall
 	applymovement EVENT_OBJ_ID_PLAYER, TrainerHill_Entrance_Movement_268385
 	waitmovement 0
-	setmetatile 17, 10, 820, 1
+	setmetatile 17, 10, METATILE_TrainerHill_CounterDoor, 1
 	special DrawWholeMapView
 	playse SE_TK_KASYA
 	waitse
@@ -276,9 +276,9 @@ TrainerHill_Entrance_Pokemart_2683E8: @ 82683E8
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_AWAKENING
 	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_SPECIAL
+	.2byte ITEM_X_SP_ATK
 	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFEND
+	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_X_ACCURACY
@@ -300,9 +300,9 @@ TrainerHill_Entrance_Pokemart_268414: @ 8268414
 	.2byte ITEM_FULL_HEAL
 	.2byte ITEM_REVIVE
 	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_SPECIAL
+	.2byte ITEM_X_SP_ATK
 	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFEND
+	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_X_ACCURACY
