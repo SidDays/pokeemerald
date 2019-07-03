@@ -9,16 +9,16 @@
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
             "script": "SerenityMeadows_EventScript_1EC0F3",
             "type": "sign",
-            "x": 17,
-            "y": 2
+            "x": 4,
+            "y": 4
         },
         {
             "elevation": 0,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
             "script": "SerenityMeadows_EventScript_1EC0EA",
             "type": "sign",
-            "x": 38,
-            "y": 9
+            "x": 37,
+            "y": 12
         }
     ],
     "connections": [
@@ -46,8 +46,8 @@
             "script": "SerenityMeadows_EventScript_1EC0E1",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
-            "x": 18,
-            "y": 11
+            "x": 19,
+            "y": 9
         },
         {
             "elevation": 3,
@@ -59,8 +59,8 @@
             "script": "SerenityMeadows_EventScript_1EC105",
             "trainer_sight_or_berry_tree_id": "3",
             "trainer_type": "1",
-            "x": 33,
-            "y": 14
+            "x": 22,
+            "y": 2
         },
         {
             "elevation": 3,
@@ -72,8 +72,8 @@
             "script": "SerenityMeadows_EventScript_1EC1B3",
             "trainer_sight_or_berry_tree_id": "2",
             "trainer_type": "1",
-            "x": 25,
-            "y": 15
+            "x": 29,
+            "y": 19
         },
         {
             "elevation": 3,
@@ -85,8 +85,8 @@
             "script": "SerenityMeadows_EventScript_1EC1CA",
             "trainer_sight_or_berry_tree_id": "3",
             "trainer_type": "1",
-            "x": 8,
-            "y": 7
+            "x": 10,
+            "y": 9
         },
         {
             "elevation": 3,
@@ -94,12 +94,12 @@
             "graphics_id": "EVENT_OBJ_GFX_OFFICER",
             "movement_range_x": 1,
             "movement_range_y": 1,
-            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
             "script": "SerenityMeadows_EventScript_1EC0FC",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
-            "x": 2,
-            "y": 6
+            "x": 1,
+            "y": 4
         },
         {
             "elevation": 3,
@@ -111,8 +111,8 @@
             "script": "SerenityMeadows_EventScript_ItemPotion",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
-            "x": 11,
-            "y": 15
+            "x": 30,
+            "y": 14
         },
         {
             "elevation": 3,
@@ -124,8 +124,8 @@
             "script": "BerryTreeScript",
             "trainer_sight_or_berry_tree_id": "2",
             "trainer_type": "0",
-            "x": 24,
-            "y": 2
+            "x": 27,
+            "y": 13
         },
         {
             "elevation": 3,
@@ -137,8 +137,8 @@
             "script": "BerryTreeScript",
             "trainer_sight_or_berry_tree_id": "1",
             "trainer_type": "0",
-            "x": 25,
-            "y": 2
+            "x": 28,
+            "y": 13
         },
         {
             "elevation": 3,
@@ -150,7 +150,7 @@
             "script": "SerenityMeadows_EventScript_1EC1E1",
             "trainer_sight_or_berry_tree_id": "3",
             "trainer_type": "1",
-            "x": 19,
+            "x": 32,
             "y": 4
         }
     ],

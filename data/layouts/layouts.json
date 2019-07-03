@@ -178,7 +178,7 @@
             "name": "SerenityMeadows_Layout",
             "primary_tileset": "gTileset_General",
             "secondary_tileset": "gTileset_Petalburg",
-            "width": 50
+            "width": 48
         },
         {
             "blockdata_filepath": "data/layouts/Route103/map.bin",
