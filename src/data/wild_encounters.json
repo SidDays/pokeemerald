@@ -143,8 +143,8 @@
           }
         },
         {
-          "map": "MAP_ROUTE102",
-          "base_label": "gRoute102",
+          "map": "MAP_SERENITY_MEADOWS",
+          "base_label": "gSerenityMeadows",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [

@@ -11,7 +11,7 @@ OldaleTown_OnTransition: @ 81E8EA8
 	end
 
 OldaleTown_EventScript_1E8ECC:: @ 81E8ECC
-	setvar VAR_ROUTE102_ACCESSIBLE, 1
+	setvar VAR_SERENITY_MEADOWS_ACCESSIBLE, 1
 	return
 
 OldaleTown_EventScript_1E8ED2:: @ 81E8ED2

@@ -190,7 +190,7 @@ static const struct {
     {
         SPECIES_SEEDOT,
         {MOVE_BIDE, MOVE_HARDEN, MOVE_LEECH_SEED},
-        3, 0x11 // Route 102
+        3, 0x11 // Serenity Meadows
     },
     {
         SPECIES_NUZLEAF,

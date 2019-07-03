@@ -86,7 +86,7 @@ gStdScripts_End:: @ 81DC2CC
 	.include "data/maps/VerdanturfTown/scripts.inc"
 	.include "data/maps/PacifidlogTown/scripts.inc"
 	.include "data/maps/Route101/scripts.inc"
-	.include "data/maps/Route102/scripts.inc"
+	.include "data/maps/SerenityMeadows/scripts.inc"
 	.include "data/maps/Route103/scripts.inc"
 	.include "data/maps/Route104/scripts.inc"
 	.include "data/maps/Route105/scripts.inc"

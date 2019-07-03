@@ -1,4 +1,4 @@
-Route102_EventScript_ItemPotion:: @ 8290CD8
+SerenityMeadows_EventScript_ItemPotion:: @ 8290CD8
 	giveitem_std ITEM_POTION, 1, 1
 	end
 
