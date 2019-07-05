@@ -70,7 +70,9 @@
         "LittlerootTown_MaysHouse_1F",
         "LittlerootTown_MaysHouse_2F",
         "LittlerootTown_ProfessorBirchsLab",
-        "NewLab"
+        "NewLab",
+        "ResearcherLodge",
+        "ResearcherLodge_2F"
     ],
     "gMapGroup10": [
         "MauvilleCity_Gym",

@@ -7175,3 +7175,7 @@ gText_082C877B:: @ 82C877B
 	.include "data/maps/NewLab/scripts.inc"
 
 	.include "data/maps/Route501/scripts.inc"
+
+	.include "data/maps/ResearcherLodge/scripts.inc"
+
+	.include "data/maps/ResearcherLodge_2F/scripts.inc"

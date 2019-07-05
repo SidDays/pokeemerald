@@ -4479,6 +4479,26 @@
             "primary_tileset": "gTileset_General",
             "secondary_tileset": "gTileset_Petalburg",
             "width": 20
+        },
+        {
+            "blockdata_filepath": "data/layouts/ResearcherLodge/map.bin",
+            "border_filepath": "data/layouts/ResearcherLodge/border.bin",
+            "height": 9,
+            "id": "LAYOUT_RESEARCHER_LODGE",
+            "name": "ResearcherLodge_Layout",
+            "primary_tileset": "gTileset_Building",
+            "secondary_tileset": "gTileset_BrendansMaysHouse",
+            "width": 12
+        },
+        {
+            "blockdata_filepath": "data/layouts/ResearcherLodge_2F/map.bin",
+            "border_filepath": "data/layouts/ResearcherLodge_2F/border.bin",
+            "height": 9,
+            "id": "LAYOUT_RESEARCHER_LODGE_2F",
+            "name": "ResearcherLodge_2F_Layout",
+            "primary_tileset": "gTileset_Building",
+            "secondary_tileset": "gTileset_BrendansMaysHouse",
+            "width": 12
         }
     ],
     "layouts_table_label": "gMapLayouts"

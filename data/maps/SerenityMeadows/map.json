@@ -103,7 +103,7 @@
         },
         {
             "elevation": 3,
-            "flag": "FLAG_ITEM_ROUTE_102_POTION",
+            "flag": "FLAG_ITEM_RESEARCHER_LODGE_2F_UNUSED",
             "graphics_id": "EVENT_OBJ_GFX_ITEM_BALL",
             "movement_range_x": 0,
             "movement_range_y": 0,
