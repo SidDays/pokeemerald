@@ -3,8 +3,11 @@ ResearcherLodge_MapScripts::
 
 /* Environment and NPCs */
 ResearcherLodge_Script_Scientist::
-	msgbox ResearcherLodge_Text_Scientist, MSGBOX_NPC
-	applymovement 2, Common_Movement_FaceRight
+	lock
+	faceplayer
+	msgbox ResearcherLodge_Text_Scientist, MSGBOX_DEFAULT
+	applymovement 1, Common_Movement_FaceRight
+	release
 	end
 
 ResearcherLodge_Text_Scientist:

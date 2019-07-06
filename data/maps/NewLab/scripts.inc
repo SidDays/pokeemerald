@@ -2,7 +2,7 @@ NewLab_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, NewLab_MapScript_OnFrameTable
 	.byte 0
 
-/* TODO: Intro Sequence */
+/* Intro Sequence */
 NewLab_MapScript_OnFrameTable:
 	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 1, NewLab_Script_PlayerWalksIntoLab
 	.2byte 0
@@ -14,16 +14,23 @@ NewLab_Script_PlayerWalksIntoLab:
 	applymovement EVENT_OBJ_ID_PLAYER, NewLab_Movement_PlayerGoesToProf
 	waitmovement 0
 	delay 16
+	msgbox NewLab_Text_ProfWelcomes, MSGBOX_DEFAULT
+	closemessage
+
+	applymovement 2, Common_Movement_FaceRight
+	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	applymovement 2, Common_Movement_ExclamationMark
+	waitmovement 0
 	playse SE_PIN
 	waitse
-	applymovement 1, Common_Movement_ExclamationMark
-	waitmovement 0
-	msgbox NewLab_Text_ProfWelcomes, MSGBOX_DEFAULT
-
-	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_FaceLeft
-	applymovement 2, Common_Movement_FaceRight
-	waitmovement 0
 	msgbox NewLab_Text_AlyshaWelcomes, MSGBOX_DEFAULT
+
+	/* Set the clock */
+	call LittlerootTown_BrendansHouse_2F_EventScript_292849
+	delay 30
+	setflag FLAG_SET_WALL_CLOCK
+	msgbox NewLab_Text_AlyshaIsStillPissed, MSGBOX_DEFAULT
 
 	applymovement 3, Common_Movement_FaceLeft
 	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_FaceRight
@@ -49,10 +56,14 @@ NewLab_Text_ProfWelcomes:
 	.string "Prof. Pine: {PLAYER}, You made it!$"
 
 NewLab_Text_AlyshaWelcomes:
-	.string "Alysha:  …hmph, it's about time!$"
+	.string "Alysha: …you're late!\p"
+	.string "Do you even know what time it is?$"
+
+NewLab_Text_AlyshaIsStillPissed:
+	.string "That's right! Hmph!$"
 
 NewLab_Text_JaiWelcomes:
-	.string "Jai: Hi, {PLAYER}!\p"
+	.string " Jai: Hi, {PLAYER}!\p"
 	.string "Prof. Pine: Now, now, you three.$"
 
 /* Starter Selection */
@@ -77,17 +88,40 @@ NewLab_Script_StarterSelect::
 	fadescreen 0
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
-	/* TODO: Nickname */
-	applymovement EVENT_OBJ_ID_PLAYER, NewLab_Movement_PlayerGetsOutOftheWay
+
+	playfanfare MUS_RG_FAN5
+	bufferleadmonspeciesname 0
+	message NewLab_Text_PlayerPicksStarter
+	waitfanfare
+
+	/* Nickname */
+	applymovement 1, Common_Movement_FaceLeft
+	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
+	bufferleadmonspeciesname 0
+	msgbox NewLab_Text_ProfAsksToNickname, MSGBOX_YESNO
+	compare VAR_RESULT, 1
+	call_if_eq Common_EventScript_NameReceivedPokemon
+	closemessage
+
 	applymovement 1, Common_Movement_FaceDown
+	waitmovement 0
+	delay 16
+	applymovement EVENT_OBJ_ID_PLAYER, NewLab_Movement_PlayerGetsOutOftheWay
 	waitmovement 0
 
 	/* Alysha picks a starter */
 	msgbox NewLab_Text_AlyshaGetsStarter, MSGBOX_DEFAULT
 	applymovement 2, NewLab_Movement_AlyshaGetsStarter
 	waitmovement 0
-	delay 48
+	compare VAR_STARTER_MON, 0
+	playfanfare MUS_RG_FAN5
+	call_if_eq NewLab_Script_AlyshaPicksChimchar
+	compare VAR_STARTER_MON, 1
+	call_if_eq NewLab_Script_AlyshaPicksFroakie
+	compare VAR_STARTER_MON, 2
+	call_if_eq NewLab_Script_AlyshaPicksRowlet
+	waitfanfare
 	applymovement 2, NewLab_Movement_AlyshaReturnsToPosition
 	waitmovement 0
 
@@ -95,9 +129,18 @@ NewLab_Script_StarterSelect::
 	msgbox NewLab_Text_JaiGetsStarter, MSGBOX_DEFAULT
 	applymovement 3, NewLab_Movement_JaiGetsStarter
 	waitmovement 0
-	delay 48
+	playfanfare MUS_RG_FAN5
+	compare VAR_STARTER_MON, 0
+	call_if_eq NewLab_Script_JaiPicksFroakie
+	compare VAR_STARTER_MON, 1
+	call_if_eq NewLab_Script_JaiPicksRowlet
+	compare VAR_STARTER_MON, 2
+	call_if_eq NewLab_Script_JaiPicksChimchar
+	waitfanfare
 	applymovement 3, NewLab_Movement_JaiReturnsToPosition
 	waitmovement 0
+
+	delay 16
 
 	/* Prof hides the bag */
 	msgbox NewLab_Text_ProfStashesBag, MSGBOX_DEFAULT
@@ -108,11 +151,11 @@ NewLab_Script_StarterSelect::
 	applymovement 1, NewLab_Movement_ProfReturnsToPosition
 	waitmovement 0
 	
-	/* Prof gives dex and balls */
-	msgbox NewLab_Text_ProfGivesDexAndBalls, MSGBOX_DEFAULT
+	/* Prof gives Dex */
+	msgbox NewLab_Text_ProfGivesDex, MSGBOX_DEFAULT
 
 	/* TODO: Sounds */
-	applymovement 1, NewLab_Movement_ProfGivesDexAndBallsToPlayer
+	applymovement 1, NewLab_Movement_ProfGivesDexToPlayer
 	waitmovement 0
 
 	playfanfare MUS_FANFA4
@@ -120,18 +163,16 @@ NewLab_Script_StarterSelect::
 	waitfanfare
 	setflag FLAG_SYS_POKEDEX_GET
 	special sub_81AFDA0
-	setflag FLAG_SYS_NATIONAL_DEX
-	special EnableNationalPokedex
 	closemessage
 	delay 24
 
-	applymovement 1, NewLab_Movement_ProfGivesDexAndBallsToAlysha
+	applymovement 1, NewLab_Movement_ProfGivesDexToAlysha
 	waitmovement 0
 	applymovement 2, Common_Movement_FaceRight
 	waitmovement 0
 	delay 16
 
-	applymovement 1, NewLab_Movement_ProfGivesDexAndBallsToJai
+	applymovement 1, NewLab_Movement_ProfGivesDexToJai
 	waitmovement 0
 	applymovement 3, Common_Movement_FaceLeft
 	waitmovement 0
@@ -150,7 +191,7 @@ NewLab_Script_StarterSelect::
 	waitmovement 0
 	removeobject 2
 	playse SE_KAIDAN
-	delay 48
+	delay 24
 
 	msgbox NewLab_Text_JaiLeaving, MSGBOX_DEFAULT
 	applymovement 3, NewLab_Movement_JaiLeaving
@@ -193,6 +234,12 @@ NewLab_Script_JaiWaiting::
 NewLab_Text_JaiWaiting:
 	.string "This is so exciting!$"
 
+NewLab_Text_ProfAsksToNickname:
+	.string "Prof. Pine: {PLAYER}, do you want to\n"
+	.string "give a nickname to that {STR_VAR_1}?\p"
+	.string "I think it helps Trainers bond better\n"
+	.string "with their Pokémon!$"
+
 NewLab_Script_LeaveBeforeStarterTrigger::
 	lockall
 	playse SE_PIN
@@ -217,6 +264,10 @@ NewLab_Movement_LeaveBeforeStarterTrigger:
 	step_end
 
 /* After Player's Starter Selection */
+NewLab_Text_PlayerPicksStarter:
+	.string "{PLAYER} received the {STR_VAR_1} from\n"
+	.string "Prof. Pine!$"
+
 NewLab_Movement_PlayerGetsOutOftheWay:
 	walk_left
 	walk_down
@@ -225,6 +276,33 @@ NewLab_Movement_PlayerGetsOutOftheWay:
 
 NewLab_Text_AlyshaGetsStarter:
 	.string "Alysha: My turn!$"
+
+NewLab_Script_AlyshaPicksChimchar::
+	msgbox NewLab_Text_AlyshaPicksChimchar, MSGBOX_DEFAULT
+	closemessage
+	return
+
+NewLab_Script_AlyshaPicksFroakie::
+	msgbox NewLab_Text_AlyshaPicksFroakie, MSGBOX_DEFAULT
+	closemessage
+	return
+
+NewLab_Script_AlyshaPicksRowlet::
+	msgbox NewLab_Text_AlyshaPicksRowlet, MSGBOX_DEFAULT
+	closemessage
+	return
+
+NewLab_Text_AlyshaPicksChimchar:
+	.string "Alysha received the Chimchar from\n"
+	.string "Prof. Pine!$"
+
+NewLab_Text_AlyshaPicksFroakie:
+	.string "Alysha received the Froakie from\n"
+	.string "Prof. Pine!$"
+
+NewLab_Text_AlyshaPicksRowlet:
+	.string "Alysha received the Rowlet from\n"
+	.string "Prof. Pine!$"
 
 NewLab_Movement_AlyshaGetsStarter:
 	walk_right
@@ -241,6 +319,33 @@ NewLab_Movement_AlyshaReturnsToPosition:
 
 NewLab_Text_JaiGetsStarter:
 	.string "Jai: Don't forget about me…$"
+
+NewLab_Script_JaiPicksChimchar::
+	msgbox NewLab_Text_JaiPicksChimchar, MSGBOX_DEFAULT
+	closemessage
+	return
+
+NewLab_Script_JaiPicksFroakie::
+	msgbox NewLab_Text_JaiPicksFroakie, MSGBOX_DEFAULT
+	closemessage
+	return
+
+NewLab_Script_JaiPicksRowlet::
+	msgbox NewLab_Text_JaiPicksRowlet, MSGBOX_DEFAULT
+	closemessage
+	return
+
+NewLab_Text_JaiPicksChimchar:
+	.string "Jai received the Chimchar from\n"
+	.string "Prof. Pine!$"
+
+NewLab_Text_JaiPicksFroakie:
+	.string "Jai received the Froakie from\n"
+	.string "Prof. Pine!$"
+
+NewLab_Text_JaiPicksRowlet:
+	.string "Jai received the Rowlet from\n"
+	.string "Prof. Pine!$"
 
 NewLab_Movement_JaiGetsStarter:
 	walk_left
@@ -273,19 +378,16 @@ NewLab_Movement_ProfReturnsToPosition:
 	step_end
 
 /* Pokédex */
-NewLab_Text_ProfGivesDexAndBalls:
+NewLab_Text_ProfGivesDex:
 	.string "Prof. Pine: There's some more stuff you\n"
 	.string "can use to help along the journey.\p"
 	.string "Of course, you must have heard of the\n"
 	.string "Pokédex, a high-tech tool that\l"
 	.string "automatically makes a record of any\l"
 	.string "Pokémon you meet or catch.\p"
-	.string "Also, you'll need some tools to help\n"
-	.string "you catch Pokémon!\p"
-	.string "So here's a Pokédex and five Poké Balls\n"
-	.string "for each one of you.$"
+	.string "So here's one for each of you.$"
 
-NewLab_Movement_ProfGivesDexAndBallsToPlayer:
+NewLab_Movement_ProfGivesDexToPlayer:
 	walk_down
 	walk_left
 	step_end
@@ -293,12 +395,12 @@ NewLab_Movement_ProfGivesDexAndBallsToPlayer:
 NewLab_Text_PlayerReceivesDex:
 	.string "{PLAYER} received the Pokédex!$"
 
-NewLab_Movement_ProfGivesDexAndBallsToAlysha:
+NewLab_Movement_ProfGivesDexToAlysha:
 	walk_down
 	face_left
 	step_end
 
-NewLab_Movement_ProfGivesDexAndBallsToJai:
+NewLab_Movement_ProfGivesDexToJai:
 	walk_right
 	walk_right
 	step_end
@@ -316,11 +418,11 @@ NewLab_Text_ProfIsDoneWithEverything:
 
 /* Leaving */
 NewLab_Text_AlyshaLeaving:
-	.string "Alysha: Prof. Pine, I'll take your\n"
-	.string "leave then!$"
+	.string "Alysha: Alright then!\n"
+	.string "I'm going to go and get started!$"
 
 NewLab_Text_JaiLeaving:
-	.string "Jai: I guess I'll get going too…"
+	.string "Jai: I guess I'll get going too…\p"
 	.string "Buh-bye!$"
 
 NewLab_Movement_AlyshaLeaving:

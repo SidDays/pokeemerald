@@ -1,3 +1,4 @@
+/* TODO: Welcome Speech */
 gText_Birch_Welcome::
 	.string "Dear Applicant,\p"
 
@@ -30,8 +31,7 @@ gText_Birch_AndYouAre::
 	.string "First, a little about yourself…$"
 
 gText_Birch_BoyOrGirl::
-	.string "Are you a boy?\n"
-	.string "Or are you a girl?$"
+	.string "Are you male or female?$"
 
 gText_Birch_WhatsYourName::
 	.string "…and, what is your name?$"

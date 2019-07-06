@@ -4,20 +4,33 @@ ResearcherLodge_2F_MapScripts::
 ResearcherLodge_2F_Script_ItemWelcomeKit::
 	lock
 	removeobject 1
-	msgbox ResearcherLodge_2F_Text_ItemWelcomeKit, MSGBOX_DEFAULT
+	msgbox ResearcherLodge_2F_Text_ItemWelcomeKitRunningShoes, MSGBOX_DEFAULT
 	giveitem_std ITEM_BICYCLE, 1
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
+	msgbox ResearcherLodge_2F_Text_TownMap, MSGBOX_DEFAULT
 	giveitem_std ITEM_TOWN_MAP, 1
+	msgbox ResearcherLodge_2F_Text_PokeBalls, MSGBOX_DEFAULT
+	giveitem_std ITEM_POKE_BALL, 5
 	release
 	end
 
-ResearcherLodge_2F_Text_ItemWelcomeKit:
+ResearcherLodge_2F_Text_ItemWelcomeKitRunningShoes:
 	.string "It's a package from Prof. Pine.\p"
 	.string "There's a note attached: \p"
 	.string "“Dear {PLAYER},\p"
 	.string "Here are some tools that should help\n"
-	.string "along the journey.”$"
+	.string "along the journey.\p"
+	.string "The RunningShoes will put a zip in\n"
+	.string "your step.$"
+
+ResearcherLodge_2F_Text_TownMap:
+	.string "You'll need a Town Map to get around\n"
+	.string "the region safely.$"
+
+ResearcherLodge_2F_Text_PokeBalls:
+	.string "And finally, here's five Poké Balls\n"
+	.string "to help you catch some Pokémon!”$"
 
 ResearcherLodge_2F_Script_PlayerPC::
 	setvar VAR_0x8004, 1
@@ -47,6 +60,7 @@ ResearcherLodge_2F_Text_JaiPC:
 	.string "by Jai.\p"
 	.string "Better not touch it!$"
 
+/* Extra stuff */
 ResearcherLodge_2F_Script_Notebook::
 	msgbox ResearcherLodge_2F_Text_Notebook, MSGBOX_SIGN
 	end
