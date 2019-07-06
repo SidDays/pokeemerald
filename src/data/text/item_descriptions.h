@@ -1865,9 +1865,9 @@ static const u8 sSilphScopeDesc[] = _(
     "Pokémon visible.");
 
 static const u8 sBicycleDesc[] = _(
-    "A folding bicycle\n"
-    "that is faster than\n"
-    "the Running Shoes.");
+    "Hold the B Button\n"
+    "while wearing these\n"
+    "to run extra-fast!");
 
 static const u8 sTownMapDesc[] = _(
     "Can be viewed\n"

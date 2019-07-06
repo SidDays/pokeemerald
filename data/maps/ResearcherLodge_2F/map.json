@@ -4,6 +4,54 @@
     "allow_running": false,
     "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
     "bg_events": [
+        {
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "ResearcherLodge_2F_Script_Notebook",
+            "type": "sign",
+            "x": 7,
+            "y": 1
+        },
+        {
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "ResearcherLodge_2F_Script_Notebook",
+            "type": "sign",
+            "x": 1,
+            "y": 4
+        },
+        {
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "ResearcherLodge_2F_Script_Notebook",
+            "type": "sign",
+            "x": 10,
+            "y": 1
+        },
+        {
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "ResearcherLodge_2F_Script_AlyshaPC",
+            "type": "sign",
+            "x": 8,
+            "y": 1
+        },
+        {
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "ResearcherLodge_2F_Script_JaiPC",
+            "type": "sign",
+            "x": 11,
+            "y": 1
+        },
+        {
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "ResearcherLodge_2F_Script_PlayerPC",
+            "type": "sign",
+            "x": 0,
+            "y": 4
+        }
     ],
     "connections": null,
     "coord_events": [
@@ -14,19 +62,6 @@
     "music": "MUS_MISHIRO",
     "name": "ResearcherLodge_2F",
     "object_events": [
-        {
-            "elevation": 3,
-            "flag": "0",
-            "graphics_id": "EVENT_OBJ_GFX_LEAF",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
-            "movement_type": "MOVEMENT_TYPE_FACE_UP",
-            "script": "NULL",
-            "trainer_sight_or_berry_tree_id": "0",
-            "trainer_type": "0",
-            "x": 7,
-            "y": 4
-        },
         {
             "elevation": 3,
             "flag": "FLAG_RECEIVED_RUNNING_SHOES",

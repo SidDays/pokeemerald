@@ -15,6 +15,7 @@
 #include "field_effect.h"
 #include "field_player_avatar.h"
 #include "field_screen_effect.h"
+#include "field_specials.h"
 #include "field_weather.h"
 #include "item.h"
 #include "item_menu.h"
@@ -84,6 +85,7 @@ void sub_80FD8E0(u8 taskId, s16 x, s16 y);
 void sub_80FDBEC(void);
 bool8 sub_80FDE2C(void);
 void ItemUseOutOfBattle_CannotUse(u8 taskId);
+void ItemUseOutOfBattle_TownMap(u8 taskId);
 
 // EWRAM variables
 EWRAM_DATA static void(*gUnknown_0203A0F4)(u8 taskId) = NULL;
@@ -1121,4 +1123,9 @@ void ItemUseInBattle_EnigmaBerry(u8 taskId)
 void ItemUseOutOfBattle_CannotUse(u8 taskId)
 {
     DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].data[3]);
+}
+
+void ItemUseOutOfBattle_TownMap(u8 taskId)
+{
+    FieldShowRegionMap();
 }
