@@ -303,7 +303,7 @@ $(EVENTOBJGFXDIR)/people/old_woman.4bpp: %.4bpp: %.png
 $(EVENTOBJGFXDIR)/people/picnicker.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
-$(EVENTOBJGFXDIR)/people/prof_birch.4bpp: %.4bpp: %.png
+$(EVENTOBJGFXDIR)/people/prof_pine.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 $(EVENTOBJGFXDIR)/people/psychic_m.4bpp: %.4bpp: %.png
