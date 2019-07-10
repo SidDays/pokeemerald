@@ -213,7 +213,7 @@
             "y": 8
         }
     ],
-    "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+    "region_map_section": "MAPSEC_SERENITY_TOWN",
     "requires_flash": false,
     "show_map_name": false,
     "warp_events": [
