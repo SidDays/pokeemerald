@@ -4882,14 +4882,14 @@ static void FreeResetData_ReturnToOvOrDoEvolutions(void)
     {
         gIsFishingEncounter = FALSE;
         ResetSpriteData();
-        if (gLeveledUpInBattle == 0 || gBattleOutcome != B_OUTCOME_WON)
+        if (gLeveledUpInBattle && (gBattleOutcome == B_OUTCOME_WON || gBattleOutcome == B_OUTCOME_CAUGHT))
         {
-            gBattleMainFunc = ReturnFromBattleToOverworld;
-            return;
+            gBattleMainFunc = TryEvolvePokemon;
         }
         else
         {
-            gBattleMainFunc = TryEvolvePokemon;
+            gBattleMainFunc = ReturnFromBattleToOverworld;
+            return;
         }
     }
 
@@ -5719,5 +5719,3 @@ static void HandleAction_ActionFinished(void)
     gBattleScripting.multihitMoveEffect = 0;
     gBattleResources->battleScriptsStack->size = 0;
 }
-
-

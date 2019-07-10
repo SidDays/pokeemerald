@@ -82,6 +82,10 @@ struct DisableStruct
     u16 encoredMove;
     u8 protectUses;
     u8 stockpileCounter;
+    s8 stockpileDef;
+    s8 stockpileSpDef;
+    s8 stockpileBeforeDef;
+    s8 stockpileBeforeSpDef;
     u8 substituteHP;
     u8 disableTimer:4;
     u8 disableTimerStartValue:4;
@@ -474,7 +478,7 @@ struct BattleStruct
     u32 savedBattleTypeFlags;
     u8 abilityPreventingSwitchout;
     u8 hpScale;
-    u8 synchronizeMoveEffect;
+    u16 synchronizeMoveEffect;
     bool8 anyMonHasTransformed;
     void (*savedCallback)(void);
     u16 usedHeldItems[MAX_BATTLERS_COUNT];

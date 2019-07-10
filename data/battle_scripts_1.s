@@ -608,6 +608,8 @@ BattleScript_EffectAcupressureTry:
 	attackstring
 	ppreduce
 	tryaccupressure BS_TARGET, BattleScript_ButItFailed
+	attackanimation
+	waitanimation
 	setgraphicalstatchangevalues
 	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
 	statbuffchange MOVE_EFFECT_CERTAIN, BattleScript_MoveEnd
@@ -3944,11 +3946,30 @@ BattleScript_EffectStockpile::
 	attackcanceler
 	attackstring
 	ppreduce
-	stockpile
+	stockpile 0
 	attackanimation
 	waitanimation
 	printfromtable gStockpileUsedStringIds
 	waitmessage 0x40
+	jumpifmovehadnoeffect BattleScript_EffectStockpileEnd
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_DEF, 0xC, BattleScript_EffectStockpileDef
+	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_SPDEF, 0xC, BattleScript_EffectStockpileEnd
+BattleScript_EffectStockpileDef:
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	playstatchangeanimation BS_ATTACKER, BIT_DEF | BIT_SPDEF, 0x0
+	setstatchanger STAT_DEF, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_BS_PTR, BattleScript_EffectStockpileSpDef
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 0x2, BattleScript_EffectStockpileSpDef
+	printfromtable gStatUpStringIds
+	waitmessage 0x40
+BattleScript_EffectStockpileSpDef::
+	setstatchanger STAT_SPDEF, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_BS_PTR, BattleScript_EffectStockpileEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 0x2, BattleScript_EffectStockpileEnd
+	printfromtable gStatUpStringIds
+	waitmessage 0x40
+BattleScript_EffectStockpileEnd:
+	stockpile 1
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectSpitUp::
@@ -3957,9 +3978,10 @@ BattleScript_EffectSpitUp::
 	attackstring
 	ppreduce
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
-	stockpiletobasedamage BattleScript_SpitUpFail
-	typecalc
+	setbyte gIsCriticalHit, FALSE
+	damagecalc
 	adjustdamage
+	stockpiletobasedamage BattleScript_SpitUpFail
 	goto BattleScript_HitFromAtkAnimation
 BattleScript_SpitUpFail::
 	pause 0x20
@@ -6257,6 +6279,7 @@ BattleScript_CastformChange::
 	end3
 
 BattleScript_82DB4AF::
+	copybyte gBattlerAbility, sBATTLER
 	call BattleScript_AbilityPopUp
 	docastformchangeanimation
 	waitstate
