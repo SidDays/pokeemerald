@@ -53,14 +53,14 @@
             "elevation": 3,
             "flag": "0",
             "graphics_id": "EVENT_OBJ_GFX_YOUNGSTER",
-            "movement_range_x": 0,
+            "movement_range_x": 5,
             "movement_range_y": 0,
-            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_type": "MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT",
             "script": "SerenityMeadows_EventScript_1EC105",
             "trainer_sight_or_berry_tree_id": "3",
             "trainer_type": "1",
-            "x": 22,
-            "y": 2
+            "x": 17,
+            "y": 12
         },
         {
             "elevation": 3,
@@ -72,8 +72,8 @@
             "script": "SerenityMeadows_EventScript_1EC1B3",
             "trainer_sight_or_berry_tree_id": "2",
             "trainer_type": "1",
-            "x": 29,
-            "y": 19
+            "x": 35,
+            "y": 9
         },
         {
             "elevation": 3,
@@ -81,12 +81,12 @@
             "graphics_id": "EVENT_OBJ_GFX_LASS",
             "movement_range_x": 0,
             "movement_range_y": 0,
-            "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
             "script": "SerenityMeadows_EventScript_1EC1CA",
             "trainer_sight_or_berry_tree_id": "3",
             "trainer_type": "1",
-            "x": 10,
-            "y": 9
+            "x": 8,
+            "y": 2
         },
         {
             "elevation": 3,
@@ -146,12 +146,12 @@
             "graphics_id": "EVENT_OBJ_GFX_YOUNGSTER",
             "movement_range_x": 1,
             "movement_range_y": 1,
-            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_type": "MOVEMENT_TYPE_FACE_UP_LEFT_AND_RIGHT",
             "script": "SerenityMeadows_EventScript_1EC1E1",
             "trainer_sight_or_berry_tree_id": "3",
             "trainer_type": "1",
-            "x": 32,
-            "y": 4
+            "x": 28,
+            "y": 18
         }
     ],
     "region_map_section": "MAPSEC_ROUTE_102",
@@ -159,5 +159,5 @@
     "show_map_name": true,
     "warp_events": [
     ],
-    "weather": "WEATHER_RAIN_LIGHT"
+    "weather": "WEATHER_SUNNY"
 }
