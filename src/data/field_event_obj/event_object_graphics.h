@@ -375,3 +375,4 @@ const u32 gEventObjectPic_Officer[] = INCBIN_U32("graphics/event_objects/pics/pe
 const u16 gEventObjectPalette_Officer[] = INCBIN_U16("graphics/event_objects/palettes/officer.gbapal");
 const u16 gEventObjectPalette_TMBall[] = INCBIN_U16("graphics/event_objects/palettes/tm_ball.gbapal");
 const u16 gEventObjectPalette_TallGrass[] = INCBIN_U16("graphics/event_objects/palettes/tall_grass.gbapal");
+const u16 gEventObjectPalette_Truck[] = INCBIN_U16("graphics/event_objects/palettes/truck.gbapal");

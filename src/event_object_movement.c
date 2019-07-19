@@ -429,6 +429,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define EVENT_OBJ_PAL_OFFICER 0x1124
 #define EVENT_OBJ_PAL_TALL_GRASS 0x1125
 #define EVENT_OBJ_PAL_TM_BALL 0x1126
+#define EVENT_OBJ_PAL_TRUCK 0x1127
 #define EVENT_OBJ_PAL_TAG_NONE 0x11FF
 
 #include "data/field_event_obj/field_effect_object_template_pointers.h"
@@ -478,6 +479,7 @@ const struct SpritePalette sEventObjectSpritePalettes[] = {
     {gEventObjectPalette_Officer, EVENT_OBJ_PAL_OFFICER},
     {gEventObjectPalette_TMBall, EVENT_OBJ_PAL_TM_BALL},
     {gEventObjectPalette_TallGrass, EVENT_OBJ_PAL_TALL_GRASS},
+    {gEventObjectPalette_Truck, EVENT_OBJ_PAL_TRUCK},
     {NULL,                  0x0000},
 };
 
