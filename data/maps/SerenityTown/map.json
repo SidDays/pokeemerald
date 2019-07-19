@@ -151,14 +151,14 @@
             "y": 16
         },
         {
-            "dest_map": "MAP_SERENITY_TOWN",
+            "dest_map": "MAP_COASTAL1",
             "dest_warp_id": 0,
             "elevation": 0,
             "x": 6,
             "y": 26
         },
         {
-            "dest_map": "MAP_SERENITY_TOWN",
+            "dest_map": "MAP_DARK1",
             "dest_warp_id": 0,
             "elevation": 0,
             "x": 37,
