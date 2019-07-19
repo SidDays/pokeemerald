@@ -239,6 +239,7 @@ const struct EventObjectGraphicsInfo *const gEventObjectGraphicsInfoPointers[] =
     &gEventObjectGraphicsInfo_Lugia,
     &gEventObjectGraphicsInfo_HoOh,
     &gEventObjectGraphicsInfo_Officer,
+    &gEventObjectGraphicsInfo_TMBall,
 };
 
 const struct EventObjectGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
