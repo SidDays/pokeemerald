@@ -9,23 +9,23 @@
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
             "script": "NULL",
             "type": "sign",
+            "x": 24,
+            "y": 10
+        },
+        {
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "NULL",
+            "type": "sign",
             "x": 15,
-            "y": 7
+            "y": 13
         },
         {
             "elevation": 0,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
             "script": "NULL",
             "type": "sign",
-            "x": 16,
-            "y": 12
-        },
-        {
-            "elevation": 0,
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "NULL",
-            "type": "sign",
-            "x": 17,
+            "x": 24,
             "y": 4
         }
     ],
@@ -54,21 +54,21 @@
             "script": "NULL",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
-            "x": 20,
+            "x": 19,
             "y": 6
         },
         {
             "elevation": 3,
             "flag": "0",
             "graphics_id": "EVENT_OBJ_GFX_GIRL_3",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
-            "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
             "script": "NULL",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
-            "x": 19,
-            "y": 14
+            "x": 18,
+            "y": 13
         }
     ],
     "region_map_section": "MAPSEC_DEWFORD_TOWN",
@@ -86,22 +86,22 @@
             "dest_map": "MAP_COASTAL1",
             "dest_warp_id": 0,
             "elevation": 0,
-            "x": 21,
+            "x": 20,
             "y": 4
         },
         {
             "dest_map": "MAP_COASTAL1",
             "dest_warp_id": 0,
             "elevation": 0,
-            "x": 11,
-            "y": 11
+            "x": 9,
+            "y": 10
         },
         {
             "dest_map": "MAP_COASTAL1",
             "dest_warp_id": 0,
             "elevation": 0,
-            "x": 20,
-            "y": 10
+            "x": 21,
+            "y": 11
         },
         {
             "dest_map": "MAP_COASTAL1",

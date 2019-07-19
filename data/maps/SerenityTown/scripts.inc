@@ -14,6 +14,11 @@ SerenityTown_MapScript_OnFrameTable:
 SerenityTown_MapScript_Welcome:
 	setvar VAR_LITTLEROOT_INTRO_STATE 1
 
+	/* Give RunningShoes */
+	giveitem ITEM_BICYCLE, 1
+	setflag FLAG_RECEIVED_RUNNING_SHOES
+	setflag FLAG_SYS_B_DASH
+
 	/* Player jumps out of truck */
 	playse SE_TRACK_DOOR
 	delay 10
