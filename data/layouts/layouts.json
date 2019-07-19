@@ -4418,7 +4418,7 @@
             "name": "Charlesbury_Layout",
             "primary_tileset": "gTileset_General",
             "secondary_tileset": "gTileset_Rustboro",
-            "width": 58
+            "width": 52
         },
         {
             "blockdata_filepath": "data/layouts/SerenityTown/map.bin",

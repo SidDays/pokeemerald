@@ -26,23 +26,7 @@
             "script": "NULL",
             "type": "sign",
             "x": 15,
-            "y": 34
-        },
-        {
-            "elevation": 0,
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "NULL",
-            "type": "sign",
-            "x": 44,
-            "y": 8
-        },
-        {
-            "elevation": 0,
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "NULL",
-            "type": "sign",
-            "x": 35,
-            "y": 8
+            "y": 32
         },
         {
             "elevation": 0,
@@ -50,31 +34,15 @@
             "script": "NULL",
             "type": "sign",
             "x": 43,
-            "y": 32
+            "y": 8
         },
         {
             "elevation": 0,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
             "script": "NULL",
             "type": "sign",
-            "x": 44,
-            "y": 32
-        },
-        {
-            "elevation": 0,
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "NULL",
-            "type": "sign",
-            "x": 50,
-            "y": 32
-        },
-        {
-            "elevation": 0,
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "NULL",
-            "type": "sign",
-            "x": 49,
-            "y": 32
+            "x": 34,
+            "y": 8
         }
     ],
     "connections": null,
@@ -109,8 +77,8 @@
             "script": "NULL",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
-            "x": 54,
-            "y": 6
+            "x": 37,
+            "y": 16
         }
     ],
     "region_map_section": "MAPSEC_SERENITY_TOWN",
@@ -128,14 +96,14 @@
             "dest_map": "MAP_CHARLESBURY",
             "dest_warp_id": 0,
             "elevation": 0,
-            "x": 39,
+            "x": 38,
             "y": 8
         },
         {
             "dest_map": "MAP_CHARLESBURY",
             "dest_warp_id": 0,
             "elevation": 0,
-            "x": 47,
+            "x": 46,
             "y": 8
         },
         {
@@ -150,27 +118,27 @@
             "dest_warp_id": 0,
             "elevation": 0,
             "x": 10,
-            "y": 34
-        },
-        {
-            "dest_map": "MAP_CHARLESBURY",
-            "dest_warp_id": 0,
-            "elevation": 0,
-            "x": 18,
-            "y": 34
-        },
-        {
-            "dest_map": "MAP_CHARLESBURY",
-            "dest_warp_id": 0,
-            "elevation": 0,
-            "x": 42,
             "y": 32
         },
         {
             "dest_map": "MAP_CHARLESBURY",
             "dest_warp_id": 0,
             "elevation": 0,
-            "x": 48,
+            "x": 18,
+            "y": 32
+        },
+        {
+            "dest_map": "MAP_CHARLESBURY",
+            "dest_warp_id": 0,
+            "elevation": 0,
+            "x": 47,
+            "y": 24
+        },
+        {
+            "dest_map": "MAP_CHARLESBURY",
+            "dest_warp_id": 0,
+            "elevation": 0,
+            "x": 47,
             "y": 32
         }
     ],
