@@ -4413,12 +4413,12 @@
         {
             "blockdata_filepath": "data/layouts/Charlesbury/map.bin",
             "border_filepath": "data/layouts/Charlesbury/border.bin",
-            "height": 40,
+            "height": 38,
             "id": "LAYOUT_CHARLESBURY",
             "name": "Charlesbury_Layout",
             "primary_tileset": "gTileset_General",
             "secondary_tileset": "gTileset_Rustboro",
-            "width": 60
+            "width": 58
         },
         {
             "blockdata_filepath": "data/layouts/SerenityTown/map.bin",
