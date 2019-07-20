@@ -14,11 +14,6 @@ SerenityTown_MapScript_OnFrameTable:
 SerenityTown_MapScript_Welcome:
 	setvar VAR_LITTLEROOT_INTRO_STATE 1
 
-	/* Give RunningShoes */
-	giveitem ITEM_BICYCLE, 1
-	setflag FLAG_RECEIVED_RUNNING_SHOES
-	setflag FLAG_SYS_B_DASH
-
 	/* Player jumps out of truck */
 	playse SE_TRACK_DOOR
 	delay 10
@@ -121,9 +116,16 @@ SerenityTown_Script_JaiStarterBattle3::
 
 SerenityTown_Script_JaiStarterBattleFinished::
 	fadedefaultbgm
-	msgbox SerenityTown_Text_JaiAfterBattle, MSGBOX_DEFAULT
+	msgbox SerenityTown_Text_JaiAfterBattle1, MSGBOX_DEFAULT
+
+	/* Give RunningShoes */
+	giveitem ITEM_BICYCLE, 1
+	setflag FLAG_SYS_B_DASH
+
+	msgbox SerenityTown_Text_JaiAfterBattle2, MSGBOX_DEFAULT
 	waitmessage
 	closemessage
+
 	applymovement 5, SerenityTown_Movement_JaiWalksAwayFromPlayerAfterStarterBattle
 	waitmovement 0
 	removeobject 5
@@ -155,14 +157,23 @@ SerenityTown_Text_JaiEndBattle:
 	.string "Well, that was certainly interesting…\p"
 	.string "You are a really strong Trainer!$"
 
-SerenityTown_Text_JaiAfterBattle:
+SerenityTown_Text_JaiAfterBattle1:
 	.string "I think I'll eventually get the hang\n"
 	.string "of this…\p"
+	.string "You know what, why don't you have these\n"
+	.string "as a prize for winning?$"
+
+SerenityTown_Text_JaiAfterBattle2:
+	.string "{PLAYER} switched shoes with the\n"
+	.string "RunningShoes.\p"
+	.string "I won an extra pair off a contest on\n"
+	.string "Pokézon.com, so here's the other one!\p"
 	.string "Oh, by the way, don't forget to check\n"
 	.string "out our room at the Researcher Lodge!\p"
 	.string "There's some stuff there that you might\n"
 	.string "find useful.\p"
-	.string "Now I REALLY have to get going. \nSee ya!$"
+	.string "Now I REALLY have to get going.\n"
+	.string "See ya!$"
 
 SerenityTown_Movement_JaiWalksAwayFromPlayerAfterStarterBattle:
 	walk_down
