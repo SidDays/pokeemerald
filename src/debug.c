@@ -1,6 +1,7 @@
 #if DEBUG
 
 #include "global.h"
+#include "event_data.h"
 #include "item.h"
 #include "list_menu.h"
 #include "main.h"
@@ -12,43 +13,54 @@
 #include "sound.h"
 #include "strings.h"
 #include "task.h"
+#include "constants/flags.h"
 #include "constants/items.h"
 #include "constants/maps.h"
 #include "constants/moves.h"
 #include "constants/songs.h"
 #include "constants/species.h"
 
-#define DEBUG_MAIN_MENU_HEIGHT 3
+#define DEBUG_MAIN_MENU_HEIGHT 5
 #define DEBUG_MAIN_MENU_WIDTH 10
 
 void Debug_ShowMainMenu(void);
 static void Debug_DestroyMainMenu(u8);
-static void DebugAction_Test(u8);
+static void DebugAction_ToggleBGM(u8);
+static void DebugAction_RareCandy(u8);
 static void DebugAction_RandomPokemon(u8);
+static void DebugAction_Test(u8);
 static void DebugAction_Cancel(u8);
 static void DebugTask_HandleMainMenuInput(u8);
 
 enum {
-    DEBUG_MENU_ITEM_TEST,
+    DEBUG_MENU_ITEM_TOGGLE_BGM,
+    DEBUG_MENU_ITEM_RARE_CANDY,
     DEBUG_MENU_ITEM_RANDOM_POKEMON,
+    DEBUG_MENU_ITEM_TEST,
     DEBUG_MENU_ITEM_CANCEL,
 };
 
-static const u8 gDebugText_Test[] = _("Test");
+static const u8 gDebugText_ToggleBGM[] = _("Toggle BGM");
+static const u8 gDebugText_RareCandy[] = _("Rare Candy");
 static const u8 gDebugText_RandomPokemon[] = _("Random {PKMN}");
+static const u8 gDebugText_Test[] = _("Test");
 static const u8 gDebugText_Cancel[] = _("Cancel");
 
 static const struct ListMenuItem sDebugMenuItems[] =
 {
-    [DEBUG_MENU_ITEM_TEST] = {gDebugText_Test, DEBUG_MENU_ITEM_TEST},
+    [DEBUG_MENU_ITEM_TOGGLE_BGM] = {gDebugText_ToggleBGM, DEBUG_MENU_ITEM_TOGGLE_BGM},
+    [DEBUG_MENU_ITEM_RARE_CANDY] = {gDebugText_RareCandy, DEBUG_MENU_ITEM_RARE_CANDY},
     [DEBUG_MENU_ITEM_RANDOM_POKEMON] = {gDebugText_RandomPokemon, DEBUG_MENU_ITEM_RANDOM_POKEMON},
+    [DEBUG_MENU_ITEM_TEST] = {gDebugText_Test, DEBUG_MENU_ITEM_TEST},
     [DEBUG_MENU_ITEM_CANCEL] = {gDebugText_Cancel, DEBUG_MENU_ITEM_CANCEL}
 };
 
 static void (*const sDebugMenuActions[])(u8) =
 {
-    [DEBUG_MENU_ITEM_TEST] = DebugAction_Test,
+    [DEBUG_MENU_ITEM_TOGGLE_BGM] = DebugAction_ToggleBGM,
+    [DEBUG_MENU_ITEM_RARE_CANDY] = DebugAction_RareCandy,
     [DEBUG_MENU_ITEM_RANDOM_POKEMON] = DebugAction_RandomPokemon,
+    [DEBUG_MENU_ITEM_TEST] = DebugAction_Test,
     [DEBUG_MENU_ITEM_CANCEL] = DebugAction_Cancel
 };
 
@@ -136,14 +148,30 @@ static void DebugTask_HandleMainMenuInput(u8 taskId)
     }
 }
 
-static void DebugAction_Cancel(u8 taskId)
+static void DebugAction_ToggleBGM(u8 taskId)
 {
+    if (FlagGet(FLAG_TOGGLE_BGM))
+    {
+        PlaySE(MUS_RG_FAN2);
+        FlagClear(FLAG_TOGGLE_BGM);
+        // gDisableMusic = FALSE;
+    }
+    else
+    {
+        PlaySE(SE_W062B);
+        FlagSet(FLAG_TOGGLE_BGM);
+        // gDisableMusic = TRUE;
+        FadeOutMapMusic(5);
+    }
+
+    
     Debug_DestroyMainMenu(taskId);
 }
 
-static void DebugAction_Test(u8 taskId)
+static void DebugAction_RareCandy(u8 taskId)
 {
     AddBagItem(ITEM_RARE_CANDY, 99);
+    PlaySE(MUS_FANFA4);
     Debug_DestroyMainMenu(taskId);
 }
 
@@ -151,16 +179,28 @@ static void DebugAction_RandomPokemon(u8 taskId)
 {
     struct Pokemon mon;
     u16 species = Random() % NUM_SPECIES + 1;
+    u16 itemId = Random() % ITEMS_COUNT + 1;
+    u8 heldItem[2];
     u8 level = Random() % 100 + 1;
-    // u16 itemId = ITEM_MENTAL_HERB;
-    // u8 heldItem[2];
+
+    heldItem[0] = itemId;
+    heldItem[1] = itemId >> 8;
+    CreateMon(&mon, species, level, 0x20, FALSE, 0, FALSE, 0);
+    SetMonData(&mon, MON_DATA_HELD_ITEM, heldItem);
+    GiveMonToPlayer(&mon);
 
     PlaySE(MUS_RG_FAN5);
-    // heldItem[0] = itemId;
-    // heldItem[1] = itemId >> 8;
-    // SetMonData(&mon, MON_DATA_HELD_ITEM, heldItem);
-    CreateMon(&mon, species, level, 0x20, FALSE, 0, FALSE, 0);
-    GiveMonToPlayer(&mon);
+    Debug_DestroyMainMenu(taskId);
+}
+
+static void DebugAction_Test(u8 taskId)
+{
+    PlaySE(SE_W171);
+    Debug_DestroyMainMenu(taskId);
+}
+
+static void DebugAction_Cancel(u8 taskId)
+{
     Debug_DestroyMainMenu(taskId);
 }
 #endif

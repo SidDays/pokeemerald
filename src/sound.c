@@ -7,6 +7,8 @@
 #include "pokemon.h"
 #include "constants/songs.h"
 #include "task.h"
+#include "event_data.h"
+#include "constants/flags.h"
 
 struct Fanfare
 {
@@ -63,14 +65,24 @@ static const struct Fanfare sFanfares[] = {
 
 #define CRY_VOLUME  120 // was 125 in R/S
 
+void UpdateGDisableMusicFromToggleBGMFlag() {
+    gDisableMusic = FALSE;
+
+    if (FlagGet(FLAG_TOGGLE_BGM))
+        gDisableMusic = TRUE;
+}
+
 void InitMapMusic(void)
 {
-    gDisableMusic = FALSE;
+    UpdateGDisableMusicFromToggleBGMFlag();
+
     ResetMapMusic();
 }
 
 void MapMusicMain(void)
 {
+    UpdateGDisableMusicFromToggleBGMFlag(); // Not sure why this has to be done here too
+
     switch (sMapMusicState)
     {
     case 0:
