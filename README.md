@@ -1,9 +1,9 @@
-# Pokémon Emerald Hack
+# Pokémon Euphoria Version
 
 ## Introduction
 
 I (Sidrk) am making a Pokémon Hack!
-It doesn't have a name yet, neither a set story. Frankly, I've barely finished any work on it yet.
+It doesn't have a specific story; frankly, I've barely finished any work on it yet.
 But stay tuned! Perhaps I can make the next [Pokémon Gaia](https://www.pokecommunity.com/showthread.php?t=326118) ~~or even better lol~~
 
 It builds the following rom:
