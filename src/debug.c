@@ -6,6 +6,7 @@
 #include "list_menu.h"
 #include "main.h"
 #include "menu.h"
+#include "map_name_popup.h"
 #include "overworld.h"
 #include "pokemon.h"
 #include "random.h"
@@ -102,9 +103,12 @@ void Debug_ShowMainMenu(void) {
     u8 menuTaskId;
     u8 inputTaskId;
 
+    // Remove pesky map popup
+    HideMapNamePopUpWindow();
+
     // create window
+    sub_81973A4();
     windowId = AddWindow(&sDebugMenuWindowTemplate);
-    SetStandardWindowBorderStyle(windowId, 0);
     DrawStdWindowFrame(windowId, FALSE);
 
     // create list menu
