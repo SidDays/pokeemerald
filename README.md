@@ -1,14 +1,42 @@
-# About this branch
-This is a decapitalized (all-caps text replaced with proper capitalization) version of the [**pokeemerald**](https://travis-ci.org/pret/pokeemerald) dissasembly, originally made by [**Wyrserth**](https://github.com/Wyrserth) and adapted to the current structure of the project.
+# Pokémon Euphoria Version
 
-As the disassembly continues to develop, I'll try to keep up this branch as updated as possible.
+## Introduction
+
+I (Sidrk) am making a Pokémon Hack!
+It doesn't have a specific story; frankly, I've barely finished any work on it yet.
+But stay tuned! Perhaps I can make the next [Pokémon Gaia](https://www.pokecommunity.com/showthread.php?t=326118) ~~or even better lol~~
 
 It builds the following ROM:
 
-* pokeemerald.gba `sha1: 8C19F2555E10DFF32A9914CEAC360B018AF42E6C`
+* pokeemerald.gba
 
 To set up the repository, see [INSTALL.md](INSTALL.md).
 
+## Credits
+
+### Scripting
+- [Avara](https://www.pokecommunity.com/member.php?u=294199) on PokéCommunity for her [pokeemerald scripting tutorials](https://www.pokecommunity.com/showthread.php?p=9963724)
+- [aueuaio](https://www.pokecommunity.com/member.php?u=725983) on PokéCommunity for his [tutorial](https://www.pokecommunity.com/showpost.php?p=9995188&postcount=16) on skipping the Poochyena Battle after starter selection
+- [ThomasWinwood](https://www.pokecommunity.com/member.php?u=439522) on PokéCommunity for his [tutorial](https://www.pokecommunity.com/showthread.php?t=420390) on implementing a debug menu
+- [BLAx501!](https://whackahack.com/foro/u-26580/blax501-/) on Whack a Hack! for their [tutorial](https://whackahack.com/foro/t-58832/pokeemerald-mostrar-hora-al-desplegar-menu) on Time Display in the Start Menu
+
+### Music
+- FroggestSpirit and Kurausukun on the pret discord for help with adding music tracks to pokeemerald
+- [FreeMidi.org](https://freemidi.org/), various uploaders on [MuseScore](https://musescore.com) and [MidiDB](https://www.mididb.com/) for various MIDI files which I could convert into music
+
+### Other
+- [Wyrserth](https://github.com/Wyrserth/pokeemerald) and [AsparagusEduardo](https://github.com/AsparagusEduardo/pokeemerald/tree/Decapitalization) for their pokeemerald decapitalization.
+
+### Tools Used
+- [pokeemerald](https://github.com/pret/pokeemerald)
+- [porymap](https://github.com/huderlem/porymap)
+- [Advance Map 1.92](https://www.pokecommunity.com/showthread.php?t=127348)
+- [TileMap Creator](https://github.com/erandis-vol/Tilemap-Creator/releases)
+- [GraphicsGale](https://graphicsgale.com/us/)
+- [FL Studio](https://www.image-line.com/flstudio/)
+- [Anvil Studio](https://www.anvilstudio.com/)
+- [VS Code](https://code.visualstudio.com/)
+- [Adobe Photoshop](https://www.adobe.com/products/photoshop.html)
 
 ## See also
 
